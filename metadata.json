@@ -1,0 +1,6 @@
+{
+  "name": "Kit 500 Questões OAB",
+  "description": "Treine para a 1ª fase da OAB com 500 questões objetivas, simulados e cronograma de estudos. Material digital com acesso imediato.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
