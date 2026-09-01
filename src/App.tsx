@@ -559,16 +559,7 @@ export default function App() {
         </div>
       </footer>
 
-      {/* 19. CTA FIXO MOBILE */}
-      <div className="lg:hidden fixed bottom-0 left-0 w-full p-4 z-[200] animate-in fade-in slide-in-from-bottom-10 duration-700">
-        <div className="bg-white/95 backdrop-blur-xl p-4 rounded-2xl shadow-[0_-20px_50px_rgba(0,0,0,0.1)] border border-white flex items-center justify-between gap-4">
-          <div className="pl-2">
-            <div className="text-[9px] font-mono text-text-sec/80 uppercase tracking-tighter">KIT COMPLETO</div>
-            <div className="text-2xl font-inter font-black text-primary leading-none">R$ 19</div>
-          </div>
-          <CTAButton variant="mobile">COMPRAR AGORA</CTAButton>
-        </div>
-      </div>
+
 
       {/* MODAL DE IMAGEM */}
       {selectedImg && (
