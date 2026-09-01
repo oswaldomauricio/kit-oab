@@ -1,11 +1,12 @@
-import React, { useState, useEffect } from "react";
-import { 
-  ShieldCheck, Zap, FileText, ChevronDown, X, Target, Layout, Check, 
-  ArrowRight, MousePointerClick, Users, BookOpen, Clock, Lock
+import React, { useState, useEffect, useRef } from "react";
+import {
+  ShieldCheck, Zap, FileText, ChevronDown, X, Target, Layout, Check,
+  ArrowRight, MousePointerClick, Users, BookOpen, Clock, Lock,
+  ChevronLeft, ChevronRight
 } from "lucide-react";
 
 // 1. CONFIGURAÇÃO DE CHECKOUT E UTMs
-const CHECKOUT_URL_BASE = "COLE_AQUI_O_LINK_DA_CAKTO";
+const CHECKOUT_URL_BASE = "https://app.abacatepay.com/pay/bill_FkWfjLNkHsmuKwJJygjWm4h1";
 
 const useCheckoutUrl = () => {
   const [finalUrl, setFinalUrl] = useState(CHECKOUT_URL_BASE);
@@ -15,13 +16,13 @@ const useCheckoutUrl = () => {
       try {
         const urlObj = new URL(CHECKOUT_URL_BASE);
         const params = new URLSearchParams(window.location.search);
-        
+
         // Preservar UTMs e parâmetros de rastreio
         const trackParams = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'fbclid', 'src'];
         trackParams.forEach(param => {
           if (params.has(param)) urlObj.searchParams.set(param, params.get(param)!);
         });
-        
+
         setFinalUrl(urlObj.toString());
       } catch (error) {
         console.warn("Invalid CHECKOUT_URL_BASE. Using fallback.");
@@ -40,24 +41,22 @@ const useCheckoutUrl = () => {
 
 // 2. COMPONENTES DE UI REUTILIZÁVEIS
 const SectionTag = ({ text, dark = false }: { text: string; dark?: boolean }) => (
-  <span className={`font-mono text-[11px] tracking-[0.2em] px-4 py-1.5 rounded-full border ${
-    dark ? 'border-white/20 text-white/70' : 'border-primary/30 text-primary'
-  } uppercase mb-8 inline-block w-fit`}>
+  <span className={`font-mono text-[11px] tracking-[0.2em] px-4 py-1.5 rounded-full border ${dark ? 'border-white/20 text-white/70' : 'border-primary/30 text-primary'
+    } uppercase mb-8 inline-block w-fit`}>
     {text}
   </span>
 );
 
 const NeumorphicCard: React.FC<{ children: React.ReactNode; className?: string; hover?: boolean; size?: "sm" | "md" }> = ({ children, className = "", hover = true, size = "md" }) => (
-  <div className={`bg-bg ${size === 'sm' ? 'rounded-3xl shadow-neumorphic-sm p-5' : 'rounded-[32px] shadow-neumorphic p-8'} border border-white/60 transition-all duration-300 ${
-    hover ? 'hover:-translate-y-2' : ''
-  } ${className}`}>
+  <div className={`bg-bg ${size === 'sm' ? 'rounded-3xl shadow-neumorphic-sm p-5' : 'rounded-[32px] shadow-neumorphic p-8'} border border-white/60 transition-all duration-300 ${hover ? 'hover:-translate-y-2' : ''
+    } ${className}`}>
     {children}
   </div>
 );
 
 const CTAButton = ({ children, className = "", variant = "main" }: { children: React.ReactNode; className?: string; variant?: "main" | "header" | "mobile" }) => {
   const { finalUrl, handleTrack } = useCheckoutUrl();
-  
+
   const styles = {
     main: "bg-primary hover:bg-primary-vibrant text-white px-8 md:px-12 py-4 md:py-5 rounded-2xl text-lg md:text-xl font-black shadow-btn w-full md:w-fit text-center",
     header: "bg-primary hover:bg-primary-vibrant text-white px-4 py-2 md:px-6 md:py-2.5 rounded-xl text-xs md:text-sm font-bold shadow-lg whitespace-nowrap",
@@ -65,8 +64,8 @@ const CTAButton = ({ children, className = "", variant = "main" }: { children: R
   };
 
   return (
-    <a 
-      href={finalUrl} 
+    <a
+      href={finalUrl}
       onClick={handleTrack}
       className={`font-inter font-black flex items-center justify-center gap-2 transition-all active:scale-95 ${styles[variant]} ${className}`}
     >
@@ -79,12 +78,29 @@ const CTAButton = ({ children, className = "", variant = "main" }: { children: R
 export default function App() {
   const [selectedImg, setSelectedImg] = useState<string | null>(null);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const carouselRef = useRef<HTMLDivElement>(null);
+
+  const scrollCarousel = (direction: 'left' | 'right') => {
+    if (carouselRef.current) {
+      const scrollAmount = direction === 'left' ? -340 : 340;
+      carouselRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
+  };
 
   const samples = [
     { id: "SLOT.01", title: "Caderno principal", desc: "500 questões objetivas para treinar a 1ª fase da OAB.", img: "/images/capa-kit-oab.png" },
-    { id: "SLOT.02", title: "Direito Internacional", desc: "Questões organizadas em um formato limpo e confortável.", img: "/images/amostra-direito-internacional.png" },
-    { id: "SLOT.03", title: "Direito Empresarial", desc: "Exercícios objetivos para testar a aplicação prática.", img: "/images/amostra-direito-empresarial-01.png" },
-    { id: "SLOT.04", title: "Material por disciplina", desc: "Páginas organizadas para facilitar o treino.", img: "/images/amostra-direito-empresarial-02.png" },
+    { id: "SLOT.02", title: "Direito Penal e Constitucional", desc: "Questões organizadas em um formato limpo e confortável.", img: "/images/direito-penal-e-constitucional.png" },
+    { id: "SLOT.03", title: "Direito Empresarial e Administrativo", desc: "Exercícios objetivos para testar a aplicação prática.", img: "/images/direito-empresarial-e-administrativo.jpg" },
+    { id: "SLOT.04", title: "Material por disciplina", desc: "Páginas organizadas para facilitar o treino.", img: "/images/material-por-disciplina.jpg" },
+  ];
+
+  const pageSamples = [
+    { id: "PÁG.01", title: "Direito Civil", desc: "Questões 23 e 24 com gabarito e organização cirúrgica.", img: "/images/pagina-direito-civil.jpg" },
+    { id: "PÁG.02", title: "Direito Penal", desc: "Questões 3 e 4 formatadas para leitura rápida.", img: "/images/pagina-direito-penal.jpg" },
+    { id: "PÁG.03", title: "Direito do Consumidor", desc: "Questões 15 e 16 focadas nos tópicos essenciais.", img: "/images/pagina-direito-consumidor.jpg" },
+    { id: "PÁG.04", title: "Direito Empresarial", desc: "Questões 13 e 14 com layout limpo e intuitivo.", img: "/images/pagina-direito-empresarial.jpg" },
+    { id: "PÁG.05", title: "Direito Internacional", desc: "Questões 39 e 40 com padrão da banca FGV.", img: "/images/pagina-direito-internacional.jpg" },
+    { id: "PÁG.06", title: "Visão Geral do Kit", desc: "Estrutura completa das 500 questões por disciplina.", img: "/images/pagina-visão-geral.jpg" },
   ];
 
   const faqs = [
@@ -100,7 +116,7 @@ export default function App() {
 
   return (
     <div className="bg-bg text-text min-h-screen font-jakarta selection:bg-primary selection:text-white">
-      
+
       {/* 6. BARRA SUPERIOR ANIME */}
       <div className="bg-primary-deep py-2.5 overflow-hidden border-b border-white/5">
         <div className="flex whitespace-nowrap animate-marquee-fast md:animate-marquee">
@@ -157,16 +173,16 @@ export default function App() {
               <div className="absolute top-20 right-8 z-20 bg-primary text-white font-inter font-black text-[10px] px-3 py-1 rounded shadow-xl -rotate-6">
                 1ª FASE · QUESTÕES
               </div>
-              <img 
-                src="/images/mockup-kit-oab.png" 
-                alt="Kit OAB Mockup" 
+              <img
+                src="/images/mockup-kit-oab.png"
+                alt="Kit OAB Mockup"
                 className="w-full h-auto rounded-[32px] transition-transform duration-1000 group-hover:scale-105 mt-6"
                 onError={(e) => {
                   (e.target as HTMLImageElement).src = "https://placehold.co/600x800/E9EDF2/E10600?text=Mockup+Kit+OAB";
                 }}
               />
             </div>
-            
+
             <div className="absolute -bottom-6 right-0 md:-right-6 bg-primary rounded-full flex flex-col items-center justify-center text-white shadow-2xl z-30 px-6 py-3 border-4 border-bg hover:scale-105 transition-transform rotate-3">
               <span className="text-[10px] font-bold leading-none mb-1">+ 2 BÔNUS</span>
               <span className="text-[8px] font-mono leading-none tracking-widest opacity-80">SIMULADO + CRONOGRAMA</span>
@@ -201,7 +217,7 @@ export default function App() {
           <h2 className="text-4xl md:text-6xl font-inter font-black tracking-tighter mb-6">Um kit, quatro ferramentas.</h2>
           <p className="text-text-sec text-lg max-w-2xl mx-auto">Treinar, revisar, medir e organizar. Tudo em um único acesso.</p>
         </div>
-        
+
         <div className="max-w-[1180px] mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
           {[
             { tag: "NÚCLEO", title: "500 questões", text: "O coração do material. Grande volume para treinar a lógica da prova.", list: ["Por disciplina", "Com gabarito", "Treino diário"] },
@@ -237,17 +253,21 @@ export default function App() {
           </h2>
         </div>
         <div className="max-w-[1180px] mx-auto relative grid md:grid-cols-3 gap-12">
-          {/* Linha decorativa desktop */}
-          <div className="hidden md:block absolute top-12 left-0 w-full h-px bg-primary/20 -z-10"></div>
-          
           {[
-            { p: "01", t: "Ritmo de treino", d: "Resolver questões ajuda a reconhecer padrões e interpretar enunciados com segurança." },
-            { p: "02", t: "Nível real", d: "Os simulados mostram exatamente quais disciplinas estão custando seus pontos." },
-            { p: "03", t: "Revisão cirúrgica", d: "Direcione seu estudo para as matérias em que você apresenta mais dificuldade." }
+            { p: "01", t: "Ritmo de treino", d: "Resolver questões ajuda a reconhecer padrões e interpretar enunciados com segurança.", img: "/images/capa-kit-oab.png" },
+            { p: "02", t: "Nível real", d: "Os simulados mostram exatamente quais disciplinas estão custando seus pontos.", img: "/images/simulado.png" },
+            { p: "03", t: "Revisão cirúrgica", d: "Direcione seu estudo para as matérias em que você apresenta mais dificuldade.", img: "/images/cronograma.png" }
           ].map((pilar, i) => (
-            <div key={i} className="text-center flex flex-col items-center">
-              <div className="w-24 h-24 bg-bg shadow-neumorphic rounded-full flex items-center justify-center border-4 border-white/80 mb-8 transition-transform hover:scale-110">
-                <div className="w-5 h-5 bg-primary rounded-full animate-pulse shadow-[0_0_20px_rgba(225,6,0,0.5)]"></div>
+            <div key={i} className="text-center flex flex-col items-center group">
+              <div className="w-full max-w-[280px] bg-bg shadow-neumorphic rounded-3xl border border-white/60 p-4 mb-8 overflow-hidden transition-transform duration-500 group-hover:-translate-y-2">
+                <img
+                  src={pilar.img}
+                  alt={pilar.t}
+                  className="w-full h-[200px] object-cover object-top rounded-2xl transition-transform duration-700 group-hover:scale-105"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).src = `https://placehold.co/280x200/E9EDF2/E10600?text=${pilar.t.replace(/ /g, '+')}`;
+                  }}
+                />
               </div>
               <SectionTag text={`PILAR.${pilar.p}`} />
               <h4 className="text-xl font-bold mb-4">{pilar.t}</h4>
@@ -268,9 +288,9 @@ export default function App() {
           {samples.map((item, i) => (
             <div key={i} className="group cursor-zoom-in" onClick={() => setSelectedImg(item.img)}>
               <div className="bg-bg shadow-neumorphic-sm p-5 rounded-3xl border border-white/60 mb-6 overflow-hidden">
-                <img 
-                  src={item.img} alt={item.title} 
-                  className="w-full h-auto rounded-2xl transition-transform duration-700 group-hover:scale-110" 
+                <img
+                  src={item.img} alt={item.title}
+                  className="w-full h-auto rounded-2xl transition-transform duration-700 group-hover:scale-110"
                   onError={(e) => {
                     (e.target as HTMLImageElement).src = `https://placehold.co/300x420/E9EDF2/E10600?text=${item.title.replace(/ /g, '+')}`;
                   }}
@@ -283,6 +303,66 @@ export default function App() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Carrossel de Páginas Reais do Produto */}
+        <div className="max-w-[1180px] mx-auto mt-20 pt-16 border-t border-black/5">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
+            <div>
+              <span className="text-primary font-mono text-[10px] tracking-widest block uppercase mb-2">PÁGINAS REAIS DO MATERIAL</span>
+              <h3 className="text-2xl md:text-4xl font-inter font-black tracking-tighter">Veja as questões por dentro</h3>
+              <p className="text-text-sec text-sm mt-1">Clique na imagem para ampliar e conferir a qualidade do conteúdo.</p>
+            </div>
+            <div className="flex items-center gap-3">
+              <button
+                onClick={() => scrollCarousel('left')}
+                className="w-12 h-12 rounded-2xl bg-bg shadow-neumorphic flex items-center justify-center text-text hover:text-primary transition-all active:scale-95 border border-white/60 cursor-pointer"
+                aria-label="Anterior"
+              >
+                <ChevronLeft className="w-6 h-6" />
+              </button>
+              <button
+                onClick={() => scrollCarousel('right')}
+                className="w-12 h-12 rounded-2xl bg-bg shadow-neumorphic flex items-center justify-center text-text hover:text-primary transition-all active:scale-95 border border-white/60 cursor-pointer"
+                aria-label="Próximo"
+              >
+                <ChevronRight className="w-6 h-6" />
+              </button>
+            </div>
+          </div>
+
+          <div
+            ref={carouselRef}
+            className="flex gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-none pb-6 pt-2 px-2 scroll-smooth"
+            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+          >
+            {pageSamples.map((item, i) => (
+              <div
+                key={i}
+                className="snap-start shrink-0 w-[280px] sm:w-[320px] group cursor-zoom-in"
+                onClick={() => setSelectedImg(item.img)}
+              >
+                <div className="bg-bg shadow-neumorphic-sm p-4 rounded-3xl border border-white/60 mb-4 overflow-hidden relative">
+                  <img
+                    src={item.img}
+                    alt={item.title}
+                    className="w-full h-[380px] object-cover object-top rounded-2xl transition-transform duration-700 group-hover:scale-105"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).src = `https://placehold.co/300x420/E9EDF2/E10600?text=${item.title.replace(/ /g, '+')}`;
+                    }}
+                  />
+                  <div className="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl flex items-center justify-center pointer-events-none">
+                    <span className="bg-primary text-white font-mono text-[10px] px-3 py-1.5 rounded-full shadow-lg font-bold uppercase tracking-wider">Ampliar</span>
+                  </div>
+                </div>
+                <div className="px-2">
+                  <div className="font-mono text-[9px] text-text-sec uppercase tracking-widest mb-1">{item.id}</div>
+                  <h5 className="font-inter font-black text-base mb-1">{item.title}</h5>
+                  <p className="text-text-sec text-xs leading-relaxed">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -312,64 +392,94 @@ export default function App() {
         <div className="max-w-[840px] mx-auto">
           <div className="text-center mb-16">
             <SectionTag text="MOD.05 · OFERTA" />
-            <h2 className="text-5xl md:text-7xl font-inter font-black tracking-tighter mb-6">Apenas R$ 19.</h2>
+            <h2 className="text-5xl md:text-7xl font-inter font-black tracking-tighter mb-6">Tudo isso por menos de uma pizza.</h2>
             <p className="text-text-sec text-xl">Pagamento único. Sem mensalidade.</p>
           </div>
-          
+
           <div className="bg-bg shadow-neumorphic border-[8px] md:border-[16px] border-white/80 rounded-[32px] md:rounded-[48px] p-6 md:p-16 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-32 h-32 md:w-48 md:h-48 bg-primary/5 rounded-full -mr-16 -mt-16 md:-mr-24 md:-mt-24"></div>
-            
-            <div className="flex flex-col items-center">
+
+            {/* Decorative bars top-right */}
+            <div className="absolute top-6 right-6 flex gap-1.5 opacity-20">
+              <div className="w-1 h-8 bg-text rounded-full"></div>
+              <div className="w-1 h-8 bg-text rounded-full"></div>
+              <div className="w-1 h-8 bg-text rounded-full"></div>
+            </div>
+
+            <div className="flex flex-col">
               <SectionTag text="KIT COMPLETO" />
-              <h3 className="text-3xl md:text-4xl font-inter font-black text-center mb-10 md:mb-12">500 Questões OAB + materiais</h3>
-              
-              <div className="grid sm:grid-cols-2 gap-y-4 md:gap-y-6 gap-x-12 mb-12 md:mb-16 w-full max-w-2xl">
+              <h3 className="text-3xl md:text-4xl font-inter font-black mb-10 md:mb-12">500 Questões OAB + 2 bônus</h3>
+
+              {/* Item list with strikethrough prices */}
+              <div className="space-y-0 mb-8 w-full">
                 {[
-                  "Caderno 500 questões", "Resumos diretos", "Simulados de prova", 
-                  "Cronograma de estudos", "Gabarito completo", "7 dias de garantia"
+                  { name: "500 questões objetivas organizadas por disciplina", price: "R$ 97" },
+                  { name: "Bônus — Simulado completo", price: "R$ 67" },
+                  { name: "Bônus — Cronograma de estudos", price: "R$ 47" },
                 ].map((item, i) => (
-                  <div key={i} className="flex items-center gap-4 text-sm font-bold tracking-tight">
-                    <div className="w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center shrink-0">
-                      <Check className="w-3.5 h-3.5 text-primary" />
-                    </div>
-                    {item}
+                  <div key={i} className="flex items-center justify-between py-5 border-b border-black/5">
+                    <span className="text-sm md:text-base font-medium text-text">{item.name}</span>
+                    <span className="font-mono text-sm text-text-sec line-through ml-4 shrink-0">{item.price}</span>
                   </div>
                 ))}
               </div>
 
-              <div className="text-center mb-12">
-                <div className="font-mono text-xs text-text-sec tracking-[0.3em] mb-2">HOJE POR</div>
-                <div className="text-8xl md:text-9xl font-inter font-black text-primary tracking-tighter mb-2">R$ 19</div>
-                <div className="font-mono text-[10px] text-text-sec uppercase tracking-widest">Pagamento único via PIX ou Cartão</div>
+              {/* Total strikethrough */}
+              <div className="flex items-center justify-between mb-10">
+                <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-text-sec font-bold">Total no avulso</span>
+                <span className="font-mono text-xl md:text-2xl text-text-sec line-through font-bold">R$ 211</span>
               </div>
 
-              <CTAButton className="w-full py-6 text-xl">QUERO O KIT COMPLETO POR R$ 19 →</CTAButton>
-              
-              <div className="mt-10 flex flex-wrap justify-center gap-6 opacity-40 grayscale">
-                <Lock className="w-5 h-5" />
-                <Zap className="w-5 h-5" />
-                <ShieldCheck className="w-5 h-5" />
+              {/* Price highlight box */}
+              <div className="bg-primary-deep rounded-2xl p-6 md:p-8 mb-8">
+                <div className="flex items-center gap-2 mb-3">
+                  <div className="w-2.5 h-2.5 bg-green-400 rounded-full animate-pulse"></div>
+                  <span className="font-mono text-[10px] text-white/70 uppercase tracking-[0.2em] font-bold">Hoje, tudo junto por</span>
+                </div>
+                <div className="flex items-baseline gap-3 mb-4">
+                  <span className="text-6xl md:text-8xl font-inter font-black text-white tracking-tighter leading-none">R$19</span>
+                  <span className="font-mono text-sm text-white/60 uppercase tracking-wider">à vista</span>
+                </div>
+                <div className="flex flex-wrap gap-6 font-mono text-[10px] text-white/60 uppercase tracking-widest">
+                  <span className="flex items-center gap-2"><Zap className="w-3.5 h-3.5" /> Acesso imediato</span>
+                  <span className="flex items-center gap-2"><ShieldCheck className="w-3.5 h-3.5" /> 7 dias de garantia</span>
+                </div>
               </div>
+
+              {/* CTA */}
+              <CTAButton className="w-full py-6 text-xl rounded-2xl">QUERO O KIT COMPLETO POR R$ 19 →</CTAButton>
+
+              <p className="text-center text-text-sec/60 font-mono text-[10px] uppercase tracking-widest mt-6">
+                Pagamento processado com segurança. Após confirmação, o acesso é liberado por e-mail.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
       {/* 15. GARANTIA */}
-      <section className="py-24 md:py-40 px-6 bg-primary-deep relative overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[300px] font-inter font-black text-white/[0.03] pointer-events-none select-none">
-          7
-        </div>
-        <div className="max-w-[1180px] mx-auto text-center relative z-10 flex flex-col items-center">
-          <SectionTag text="GARANTIA TOTAL" dark />
-          <h2 className="text-4xl md:text-6xl font-inter font-black text-white tracking-tighter mb-8">7 dias para conhecer tudo.</h2>
-          <p className="text-white/60 text-lg max-w-2xl mx-auto mb-12">
-            Acesse o kit, confira o conteúdo e decida com tranquilidade. Se não for adequado para você, devolvemos seu investimento integralmente.
-          </p>
-          <div className="bg-white/5 border border-white/10 backdrop-blur-md px-8 py-4 rounded-2xl flex items-center gap-8 font-mono text-[11px] text-white/80 uppercase tracking-widest">
-            <span className="flex items-center gap-2"><ShieldCheck className="w-4 h-4 text-primary" /> Compra Protegida</span>
-            <span className="hidden sm:block text-white/20">|</span>
-            <span className="flex items-center gap-2"><Layout className="w-4 h-4 text-primary" /> Selo 7 Dias</span>
+      <section className="py-16 md:py-24 px-6">
+        <div className="max-w-[900px] mx-auto">
+          <div className="bg-bg shadow-neumorphic rounded-[32px] border border-white/60 p-8 md:p-12 flex flex-col md:flex-row items-center gap-8 md:gap-12">
+            {/* Badge 7 dias */}
+            <div className="shrink-0">
+              <div className="w-28 h-28 md:w-32 md:h-32 bg-bg shadow-neumorphic rounded-full border-4 border-white/80 flex flex-col items-center justify-center">
+                <span className="text-4xl md:text-5xl font-inter font-black text-primary-deep leading-none">7</span>
+                <span className="font-mono text-[8px] text-text-sec uppercase tracking-[0.15em] leading-tight mt-1">dias</span>
+                <span className="font-mono text-[7px] text-text-sec uppercase tracking-[0.15em] leading-tight">garantia total</span>
+              </div>
+            </div>
+            {/* Text */}
+            <div>
+              <div className="flex items-center gap-2 mb-3">
+                <div className="w-2 h-2 bg-primary-deep rounded-full"></div>
+                <span className="font-mono text-[10px] text-text-sec uppercase tracking-[0.2em] font-bold">Risco zero</span>
+              </div>
+              <h3 className="text-2xl md:text-3xl font-inter font-black tracking-tight mb-3">7 dias de garantia incondicional.</h3>
+              <p className="text-text-sec text-sm md:text-base leading-relaxed">
+                Abriu, não era pra você? Pede o reembolso em até 7 dias e a gente devolve 100% do valor. Sem burocracia, sem perguntinha, sem formulário gigante.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -384,7 +494,7 @@ export default function App() {
           <div className="space-y-6">
             {faqs.map((faq, i) => (
               <div key={i} className="group">
-                <button 
+                <button
                   onClick={() => setOpenFaq(openFaq === i ? null : i)}
                   className="w-full text-left bg-bg shadow-neumorphic border border-white/60 p-7 rounded-[24px] flex justify-between items-center transition-all group-hover:-translate-y-1"
                 >
@@ -407,10 +517,10 @@ export default function App() {
         <div className="max-w-[1180px] mx-auto grid lg:grid-cols-2 gap-12 md:gap-20 items-center">
           <div className="relative">
             <div className="bg-bg shadow-neumorphic p-4 md:p-6 rounded-[32px] md:rounded-[48px] border border-white/60">
-              <img 
-                src="/images/mockup-kit-oab.png" 
-                alt="OAB Kit" 
-                className="w-full h-auto rounded-[32px]" 
+              <img
+                src="/images/mockup-kit-oab.png"
+                alt="OAB Kit"
+                className="w-full h-auto rounded-[32px]"
                 onError={(e) => {
                   (e.target as HTMLImageElement).src = "https://placehold.co/500x600/E9EDF2/E10600?text=Mockup+Kit+OAB";
                 }}
@@ -436,13 +546,13 @@ export default function App() {
         <div className="max-w-[1180px] mx-auto flex flex-col items-center">
           <div className="font-inter font-black text-2xl tracking-tighter mb-2 uppercase">Kit OAB</div>
           <p className="text-text-sec text-sm mb-12">Material digital para preparação da 1ª fase.</p>
-          
+
           <div className="flex flex-wrap justify-center gap-10 text-[9px] font-mono tracking-widest mb-10 opacity-60 uppercase">
             <a href="#" className="hover:text-primary transition-colors">Termos de uso</a>
             <a href="#" className="hover:text-primary transition-colors">Privacidade</a>
             <a href="#" className="hover:text-primary transition-colors">Suporte</a>
           </div>
-          
+
           <div className="max-w-3xl mx-auto text-center text-[9px] font-mono text-text-sec/60 uppercase leading-loose tracking-widest">
             © 2024 KIT OAB · MATERIAL INDEPENDENTE. NÃO POSSUI VÍNCULO OFICIAL COM A ORDEM DOS ADVOGADOS DO BRASIL.
           </div>
@@ -462,7 +572,7 @@ export default function App() {
 
       {/* MODAL DE IMAGEM */}
       {selectedImg && (
-        <div 
+        <div
           className="fixed inset-0 z-[300] bg-primary-deep/95 backdrop-blur-md flex items-center justify-center p-6"
           onClick={() => setSelectedImg(null)}
         >
@@ -470,9 +580,9 @@ export default function App() {
             <X className="w-10 h-10" />
           </button>
           <div className="max-w-4xl max-h-full" onClick={e => e.stopPropagation()}>
-            <img 
-              src={selectedImg} alt="Preview" 
-              className="object-contain max-h-[85vh] rounded-2xl shadow-2xl" 
+            <img
+              src={selectedImg} alt="Preview"
+              className="object-contain max-h-[85vh] rounded-2xl shadow-2xl"
               onError={(e) => {
                 (e.target as HTMLImageElement).src = `https://placehold.co/900x1200/E9EDF2/E10600?text=Amostra`;
               }}
