@@ -6,7 +6,7 @@ import {
 } from "lucide-react";
 
 // 1. CONFIGURAÇÃO DE CHECKOUT E UTMs
-const CHECKOUT_URL_BASE = "https://pay.hotmart.com/X107415504B?sck=HOTMART_PRODUCT_PAGE&off=lktj2fk0&hotfeature=32&bid=1788232545782";
+const CHECKOUT_URL_BASE = "https://pay.hotmart.com/X107415504B?bid=1788286126811";
 
 const useCheckoutUrl = () => {
   const [finalUrl, setFinalUrl] = useState(CHECKOUT_URL_BASE);
