@@ -63,10 +63,20 @@ const CTAButton = ({ children, className = "", variant = "main" }: { children: R
     mobile: "bg-primary text-white px-6 py-4 rounded-xl text-base font-black shadow-lg w-full text-center"
   };
 
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    handleTrack();
+    // Fallback: force navigation after a short delay to allow tracking scripts to fire.
+    // This is needed because UTMFY's pixel.js intercepts clicks with preventDefault()
+    // and dispatches synthetic events that browsers ignore for <a> navigation.
+    setTimeout(() => {
+      window.location.href = finalUrl;
+    }, 300);
+  };
+
   return (
     <a
       href={finalUrl}
-      onClick={handleTrack}
+      onClick={handleClick}
       className={`font-inter font-black flex items-center justify-center gap-2 transition-all active:scale-95 ${styles[variant]} ${className}`}
     >
       {children}
