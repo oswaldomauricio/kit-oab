@@ -47,9 +47,6 @@ export default function ApostilaPage() {
 
           {/* MENUS E LINKS */}
           <nav className="hidden md:flex items-center gap-6 text-sm font-bold">
-            <Link to="/" className="text-text-sec hover:text-primary transition-colors flex items-center gap-1.5">
-              <ArrowLeft className="w-4 h-4" /> Início
-            </Link>
             <Link to="/simulado-1" className="text-text-sec hover:text-primary transition-colors flex items-center gap-1.5">
               <ListChecks className="w-4 h-4 text-primary" /> Simulado Online
             </Link>
@@ -72,14 +69,14 @@ export default function ApostilaPage() {
       {/* HERO SECTION */}
       <section className="py-16 md:py-24 px-6 relative overflow-hidden">
         <div className="max-w-[1180px] mx-auto text-center">
-          <SectionTag text="MATERIAL GRATUITO DE ESTUDO · OAB 1ª FASE" />
+          <SectionTag text="MATERIAL DE ESTUDO · OAB 1ª FASE" />
 
           <h1 className="text-4xl md:text-6xl font-black tracking-tighter mb-6 leading-tight max-w-4xl mx-auto">
             Apostila Completa de Questões <span className="text-primary">1ª Fase OAB</span>
           </h1>
 
           <p className="text-lg md:text-xl text-text-sec max-w-2xl mx-auto mb-10 leading-relaxed">
-            Faça o download gratuito da apostila oficial em PDF. Coletânea completa com questões objetivas, enunciados e gabaritos para acelerar sua aprovação.
+            Faça o download da apostila oficial em PDF. Coletânea completa com questões objetivas, enunciados e gabaritos para acelerar sua aprovação.
           </p>
 
           {/* BADGES / SPECS */}
@@ -217,7 +214,6 @@ export default function ApostilaPage() {
                   </div>
                   <div>
                     <div className="text-xs font-mono text-text-sec uppercase tracking-wider">Licença</div>
-                    <div className="font-black text-lg text-primary">Gratuito</div>
                   </div>
                 </div>
 
@@ -245,7 +241,7 @@ export default function ApostilaPage() {
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             <NeumorphicCard className="flex flex-col justify-between">
               <div>
                 <div className="w-14 h-14 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-6 shadow-inner">
@@ -268,24 +264,6 @@ export default function ApostilaPage() {
                   Guarde o arquivo no seu celular, iPad, Kindle ou notebook e resolva questões a qualquer hora, mesmo sem internet.
                 </p>
               </div>
-            </NeumorphicCard>
-
-            <NeumorphicCard className="flex flex-col justify-between">
-              <div>
-                <div className="w-14 h-14 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-6 shadow-inner">
-                  <ListChecks className="w-7 h-7" />
-                </div>
-                <h3 className="text-xl font-black tracking-tight mb-3">Simulado Online Integrado</h3>
-                <p className="text-text-sec text-sm leading-relaxed">
-                  Quer praticar com cronômetro em tempo real e correção automática? Acesse nosso simulado online gratuito.
-                </p>
-              </div>
-              <Link
-                to="/simulado-1"
-                className="mt-6 text-primary font-bold text-sm flex items-center gap-1 hover:gap-2 transition-all"
-              >
-                Ir para o Simulado Online <ArrowRight className="w-4 h-4" />
-              </Link>
             </NeumorphicCard>
           </div>
         </div>
@@ -329,7 +307,7 @@ export default function ApostilaPage() {
       <footer className="py-12 px-6 border-t border-black/5 bg-bg">
         <div className="max-w-[1180px] mx-auto flex flex-col items-center">
           <div className="font-inter font-black text-2xl tracking-tighter mb-2 uppercase">Kit OAB</div>
-          <p className="text-text-sec text-sm mb-8">Apostila Gratuita & Material de Preparação para a 1ª Fase.</p>
+          <p className="text-text-sec text-sm mb-8">Apostila & Material de Preparação para a 1ª Fase.</p>
 
           <div className="flex flex-wrap justify-center gap-8 text-xs font-bold mb-8">
             <Link to="/" className="hover:text-primary transition-colors">Página Inicial</Link>
