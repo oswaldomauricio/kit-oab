@@ -601,6 +601,103 @@ export default function App() {
         </div>
       </section>
 
+      {/* 15.B AUTORIDADE / QUEM CRIOU */}
+      <section className="py-20 md:py-32 px-6 bg-white/30 border-t border-black/5">
+        <div className="max-w-[1180px] mx-auto">
+          <div className="text-center mb-16">
+            <SectionTag text="ESPECIALISTA · AUTORIDADE" />
+            <h2 className="text-4xl md:text-5xl font-inter font-black tracking-tighter mb-4">
+              Quem está por trás do seu material de preparação?
+            </h2>
+            <p className="text-text-sec text-lg max-w-2xl mx-auto">
+              Metodologia desenvolvida por quem vivencia a preparação para o Exame da Ordem na prática.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-12 gap-10 md:gap-12 items-center">
+            {/* Foto e Card de Autoridade (Esquerda no Desktop / Em cima no Mobile) */}
+            <div className="lg:col-span-5 flex flex-col items-center">
+              <div className="bg-bg shadow-neumorphic p-4 md:p-6 rounded-[36px] border border-white/80 w-full relative overflow-hidden group">
+                <div className="relative rounded-[28px] overflow-hidden mb-6 shadow-md">
+                  <img
+                    src="/images/dr-ricardo-almeida.jpg"
+                    alt="Dr. Ricardo Almeida"
+                    className="w-full h-auto max-h-[420px] object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).src = "https://placehold.co/500x600/E9EDF2/E10600?text=Dr.+Ricardo+Almeida";
+                    }}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80" />
+                  <div className="absolute bottom-4 left-4 right-4 text-white">
+                    <span className="bg-primary text-white font-mono text-[9px] uppercase tracking-widest px-3 py-1 rounded-full font-bold inline-block mb-1">
+                      OAB / ESPECIALISTA
+                    </span>
+                    <h4 className="font-inter font-black text-xl leading-tight">Dr. Ricardo Almeida</h4>
+                    <p className="text-white/80 text-xs font-medium">Advogado e Especialista em OAB</p>
+                  </div>
+                </div>
+
+                {/* Lista de tópicos de autoridade ao lado/embaixo da foto */}
+                <div className="space-y-3 bg-white/40 p-5 rounded-2xl border border-white/60">
+                  <div className="flex items-center gap-3 text-xs font-bold text-text">
+                    <span className="text-base shrink-0">🎓</span>
+                    <span>Direito e Pós-Graduação</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-xs font-bold text-text">
+                    <span className="text-base shrink-0">⚖️</span>
+                    <span>Experiência na área jurídica</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-xs font-bold text-text">
+                    <span className="text-base shrink-0">📚</span>
+                    <span>Especialista em preparação para a OAB</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-xs font-bold text-text">
+                    <span className="text-base shrink-0">📝</span>
+                    <span>Metodologia baseada em questões</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-xs font-bold text-text">
+                    <span className="text-base shrink-0">🎯</span>
+                    <span>Foco na 1ª Fase do Exame da Ordem</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Texto Biográfico e Metodologia (Direita no Desktop / Embaixo no Mobile) */}
+            <div className="lg:col-span-7 flex flex-col justify-center space-y-6">
+              <div>
+                <span className="font-mono text-xs font-bold text-primary uppercase tracking-[0.2em] mb-2 block">
+                  SOBRE O AUTOR
+                </span>
+                <h3 className="text-3xl md:text-4xl font-inter font-black tracking-tight text-text mb-2">
+                  Dr. Ricardo Almeida
+                </h3>
+                <p className="text-primary font-bold text-lg">
+                  Advogado e especialista em preparação para o Exame da OAB.
+                </p>
+              </div>
+
+              <div className="space-y-4 text-text-sec text-base md:text-lg leading-relaxed font-jakarta">
+                <p>
+                  Com experiência na área jurídica e atuação voltada à preparação de candidatos para a 1ª fase, desenvolveu uma metodologia baseada em questões, revisão e identificação dos assuntos mais cobrados.
+                </p>
+                <p>
+                  Foi a partir dessa metodologia que surgiu o <strong className="text-text font-bold">Kit de 500 Questões da OAB</strong>, criado para ajudar o candidato a praticar, revisar seus conhecimentos e chegar mais preparado para a prova.
+                </p>
+              </div>
+
+              {/* Callout de Metodologia */}
+              <div className="bg-bg shadow-neumorphic border-2 border-primary/20 p-6 rounded-2xl relative overflow-hidden mt-4">
+                <div className="flex items-center gap-3 text-primary font-inter font-black text-lg md:text-xl">
+                  <span className="text-2xl">🔥</span>
+                  <span>Estude com estratégia. Resolva questões. Prepare-se para a OAB.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 16. FAQ (MOD.06) */}
       <section className="py-20 md:py-32 px-6">
         <div className="max-w-[800px] mx-auto">
