@@ -310,7 +310,6 @@ export default function ApostilaPage() {
           <p className="text-text-sec text-sm mb-8">Apostila & Material de Preparação para a 1ª Fase.</p>
 
           <div className="flex flex-wrap justify-center gap-8 text-xs font-bold mb-8">
-            <Link to="/" className="hover:text-primary transition-colors">Página Inicial</Link>
             <Link to="/simulado-1" className="hover:text-primary transition-colors">Simulado Interativo</Link>
             <Link to="/apostila" className="text-primary font-black">Apostila PDF</Link>
           </div>

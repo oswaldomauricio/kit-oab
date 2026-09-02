@@ -7,12 +7,12 @@ import { Link } from "react-router-dom";
 // ──────────────────────────────────────────────
 const provaData = {
   prova: {
-    nome: "Simulado Kit OAB — XIV, 40º, 42º e 43º Exames",
+    nome: "Simulado Kit OAB — 2010.2, VI, VIII, XIV, 40º, 42º e 43º Exames",
     tipo: 1,
     cor: "Branca",
     data: "2025-04-27",
-    total_questoes: 141,
-    observacao_gabarito: "Questões dos XIV, 40º, 42º e 43º Exames de Ordem Unificado. '*' indica questão anulada."
+    total_questoes: 273,
+    observacao_gabarito: "Questões dos Exames 2010.2, VI, VIII, XIV, 40º, 42º e 43º. '*' indica questão anulada."
   },
   questoes: [
     {
@@ -1715,6 +1715,1599 @@ const provaData = {
       },
       gabarito: "D",
       anulada: false
+    },
+    // ──────────────────────────────────────────────
+    // VIII EXAME DE ORDEM UNIFICADO
+    // ──────────────────────────────────────────────
+    {
+      numero: 142,
+      enunciado: "Paulo, bacharel em Direito, exerceu relevantes cargos no Poder Executivo das três esferas de Governo, adquirindo profundo conhecimento sobre as atividades internas da Administração Pública. Após aposentar‐se, sem requerer inscrição nos quadros da OAB, estabelece serviço de consultoria jurídica, tendo angariado vários clientes desde o período da inauguração da sua atividade. De acordo com o narrado e observadas as normas estatutárias, assinale a afirmativa correta.",
+      alternativas: {
+        A: "Dentre as atividades privativas do advogado incluem‐se a postulação judicial e a assessoria jurídica, mas não a consultoria.",
+        B: "O bacharel em Direito aposentado não tem vedado qualquer prática de atividade jurídica, mesmo não inscrito nos quadros da OAB.",
+        C: "O advogado atua na atividade judicial pugnando pela defesa dos interesses dos seus clientes e na consultoria jurídica",
+        D: "As atividades privativas do advogado incluem a assessoria jurídica, a direção jurídica e a atuação nos Juizados Especiais."
+      },
+      gabarito: "C",
+      anulada: false
+    },
+    {
+      numero: 143,
+      enunciado: "O advogado “Y”, recém formado, diante da dificuldade em conseguir clientes, passa a distribuir panfletos em locais próximos aos fóruns da cidade onde reside, oferecendo seus serviços profissionais. Nos panfletos distribuídos por “Y” constam informações acerca da sua especialização técnico‐científica, localização e telefones do seu escritório. Por outro lado, “Y” instalou placa na porta de seu escritório, na qual fez constar os valores cobrados por seus serviços profissionais, fixados, aliás, em patamares inferiores àqueles estipulados pela tabela de honorários da OAB. Quanto à conduta de “Y”, assinale a afirmativa incorreta.",
+      alternativas: {
+        A: "“Y” incorre em infração disciplinar, consistente na captação irregular de causas, ao distribuir panfletos ao público oferecendo seus serviços como advogado.",
+        B: "“Y” viola dispositivo do Código de Ética e Disciplina da OAB, ao fixar honorários em valores inferiores aos estipulados na tabela de honorários da OAB.",
+        C: "“Y” pode distribuir panfletos ao público, oferecendo seus serviços profissionais, desde que neles não conste sua especialização técnico‐científica.",
+        D: "“Y” viola dispositivo do Código de Ética e Disciplina da OAB, ao fazer constar de sua placa referências aos valores cobrados por seus serviços profissionais."
+      },
+      gabarito: "C",
+      anulada: false
+    },
+    {
+      numero: 144,
+      enunciado: "João, advogado inscrito há muitos anos na OAB, decide candidatar‐se, pelo quinto constitucional, ao cargo de Juiz do Tribunal Regional Federal. Em razão dessa iniciativa, é submetido a exame curricular e sabatina perante o Conselho Federal da OAB. Após longo processo avaliatório, vem a ser escolhido para integrar a lista sêxtupla a ser remetida ao Tribunal Regional Federal. Diante dessa narrativa, à luz da legislação aplicável aos advogados, assinale a afirmativa correta.",
+      alternativas: {
+        A: "O advogado, ao ser incluído em lista sêxtupla para integrar os quadros de tribunal, deve requerer licença para tratamento de questões particulares.",
+        B: "O advogado que integra lista sêxtupla ou tríplice para ingresso pelo quinto constitucional pode continuar exercendo livremente suas atividades.",
+        C: "O advogado que integra lista sêxtupla ou tríplice passa a ser considerado incompatibilizado para o exercício da advocacia.",
+        D: "O advogado que pretende ingressar na magistratura pelo quinto constitucional passa a ser considerado impedido ao compor lista sêxtupla."
+      },
+      gabarito: "B",
+      anulada: false
+    },
+    {
+      numero: 145,
+      enunciado: "José, general de brigada, entusiasmado com a opção do seu filho pelo curso de Direito, resolve acompanhá‐lo nos estudos. Presta exame vestibular e matricula‐se em outra instituição de ensino, também no curso de Direito. Ambos alcançam o período letivo em que há necessidade de realizar o estágio forense. José, desejando acompanhar seu filho nas atividades forenses nas horas de folga, vez que continua na ativa, agora como General de Divisão, requer o seu ingresso no quadro de estagiários da OAB. A partir do caso apresentado, assinale a afirmativa correta.",
+      alternativas: {
+        A: "Militar não pode, enquanto permanecer na ativa, inscrever‐se no quadro de advogados, mas se permite a ele a inscrição no quadro de estagiários.",
+        B: "Militar não pode, enquanto na ativa, obter inscrição no quadro de advogados nem no quadro de estagiários.",
+        C: "Militar da ativa pode atuar na Justiça Militar especializada, porque se inscreve no quadro especial de estagiários.",
+        D: "Militar de alta patente pode obter inscrição tanto no quadro de estagiários como no de advogados, mediante permissão especial do Presidente da OAB."
+      },
+      gabarito: "B",
+      anulada: false
+    },
+    {
+      numero: 146,
+      enunciado: "O advogado “X”, regularmente constituído pelo seu cliente “Z”, retira os autos de cartório para realizar peça defensiva dos interesses do seu cliente. Os autos permanecem no escritório profissional de “X”. Um incêndio no prédio em que se localiza o escritório destruiu numerosos documentos, inclusive os autos referidos. Com base no ocorrido, “X” comunica o fato ao Juízo e ao seu cliente. Diante dessa narrativa, à luz da legislação aplicável aos advogados, assinale a afirmativa correta.",
+      alternativas: {
+        A: "O extravio de autos é caracterizado como infração, com pena de suspensão.",
+        B: "O advogado deverá receber pena de advertência, por não prever o incêndio.",
+        C: "O extravio de autos deve ser doloso ou culposo, para ser punível disciplinarmente.",
+        D: "O extravio de autos seria punível, caso fosse recebido em confiança."
+      },
+      gabarito: "C",
+      anulada: false
+    },
+    {
+      numero: 147,
+      enunciado: "João postulou, por meio de representação de advogado, ação condenatória em face da sociedade Cacos e Cacos Ltda., obtendo sentença favorável, condenando a ré ao pagamento da quantia de R$ 100.000,00 (cem mil reais), acrescida de R$ 15.000,00 (quinze mil reais) de honorários advocatícios. Após o trânsito em julgado da decisão judicial, João e seu advogado Pedro são cientificados de que a sociedade está falida, devendo os seus créditos sofrer procedimento de habilitação. Nesse caso, a natureza dos créditos correspondentes a honorários advocatícios, nos termos do Estatuto, é considerada como",
+      alternativas: {
+        A: "quirografária.",
+        B: "real.",
+        C: "privilegiada.",
+        D: "natural."
+      },
+      gabarito: "C",
+      anulada: false
+    },
+    {
+      numero: 148,
+      enunciado: "João é contratado para propor ação de cobrança pela sociedade M e P Ltda., em face da sociedade C e L Ltda., sendo o valor da causa, correspondente ao débito, de R$ 200.000,00 (duzentos mil reais). Após iniciada a ação, mas antes do ato citatório, a sociedade autora vem a desistir da mesma. Houve contrato de honorários subscrito pelas partes aventando que, nesse caso, seriam devidos honorários fixos de R$ 10.000,00 (dez mil reais). A sociedade notificada regularmente não pagou os honorários contratuais. Nesse caso, o prazo para a prescrição da ação de cobrança de honorários passa a contar da data",
+      alternativas: {
+        A: "do trânsito em julgado da decisão judicial.",
+        B: "da desistência judicial formulada.",
+        C: "do término do mandato judicial.",
+        D: "da ultimação do serviço judicial."
+      },
+      gabarito: "B",
+      anulada: false
+    },
+    {
+      numero: 149,
+      enunciado: "Osvaldo é vereador do município “K” e ocupa cargo vinculado à Mesa da Câmara de Vereadores. Necessitando propor ação cominatória em face do seu vizinho Marcos, e sendo advogado, apresenta‐se em Juízo postulando em causa própria. Nos termos das normas estatutárias, assinale a afirmativa correta.",
+      alternativas: {
+        A: "A função de membro do Poder Legislativo impede o advogado de atuar, mesmo em causa própria.",
+        B: "A eleição para a Mesa Diretora do Poder Legislativo impede o advogado de atuar, gerando uma incompatibilidade.",
+        C: "O mandato de vereador não se inclui dentre as situações de incompatibilidade, ocupe ou não cargo na Mesa Diretora.",
+        D: "As incompatibilidades dos membros do Poder Legislativo estão circunscritas aos integrantes do Senado e da Câmara dos Deputados Federal."
+      },
+      gabarito: "B",
+      anulada: false
+    },
+    {
+      numero: 150,
+      enunciado: "Além de advogado, João é professor da Universidade pública “M”, com natureza de autarquia, onde exerce as funções de coordenador acadêmico da graduação do Curso de Direito. Diante do prestígio acumulado, o seu escritório de advocacia vem a ter renome, atuando em diversas causas nas comarcas de influência da universidade. Essas circunstâncias indicam que o cargo ocupado pelo advogado seria um caso",
+      alternativas: {
+        A: "abrangido pelas normas que criam regras de incompatibilidade para administradores públicos.",
+        B: "não previsto, vez que a atuação como dirigente de entidade pública é irrelevante para o sistema de incompatibilidades.",
+        C: "excepcionado diante da característica que o vincularia ao magistério jurídico.",
+        D: "incluído no rol de incompatibilidades por não permitir que o advogado exerça cargo administrativo nas universidades públicas."
+      },
+      gabarito: "C",
+      anulada: false
+    },
+    {
+      numero: 151,
+      enunciado: "O advogado Rubem, em causa em que patrocina os interesses da sociedade Só Fácil Ltda., cita fatos delituosos, por escrito, contra a honra do réu, sem autorização do seu cliente. Dias depois, é surpreendido com ação criminal em virtude dos fatos apresentados no processo judicial. A descrição acima amolda‐se à seguinte infração disciplinar:",
+      alternativas: {
+        A: "locupletar‐se, por qualquer forma, à custa do cliente ou da parte adversa, por si ou interposta pessoa.",
+        B: "incidir em erros reiterados que evidenciem inépcia profissional.",
+        C: "prestar concurso a cliente ou a terceiro para realização de ato contrário à lei ou destinado a fraudá‐la.",
+        D: "fazer, em nome do constituinte, sem autorização escrita deste, imputação a terceiro de fato definido como crime."
+      },
+      gabarito: "D",
+      anulada: false
+    },
+    {
+      numero: 152,
+      enunciado: "Pedro, advogado regularmente inscrito nos quadros da OAB, após regular processo administrativo disciplinar, é apenado com a sanção de exclusão por ter sido condenado pela prática de crimes contra o patrimônio, tendo a decisão judicial transitada em julgado. Após cumprir a pena e tendo sido a mesma julgada extinta pelo Juízo competente, apresenta requerimento de retorno à OAB. Nos termos do Estatuto, deve o requerente",
+      alternativas: {
+        A: "apresentar a documentação prevista para inscrição inaugural no quadro de advogados, além de submeter‐se a novo Exame de Ordem.",
+        B: "requerer a restauração da sua inscrição anterior com os documentos previstos para a inscrição inaugural, sem submissão a novo Exame de Ordem.",
+        C: "indicar provas para a inscrição nos quadros da OAB que comprovem a sua capacidade civil apta a permitir o retorno, e os documentos para inscrição inaugural.",
+        D: "comprovar a sua reabilitação e apresentar os documentos relacionados à idoneidade moral."
+      },
+      gabarito: "D",
+      anulada: false
+    },
+    {
+      numero: 153,
+      enunciado: "As alternativas a seguir apresentam algumas das competências do Conselho Federal da Ordem dos Advogados do Brasil, à exceção de uma. Assinale‐a.",
+      alternativas: {
+        A: "Representar, em juízo ou fora dele, os interesses coletivos dos advogados.",
+        B: "Velar pela dignidade, independência, prerrogativas e valorização da advocacia.",
+        C: "Representar, sem exclusividade, os advogados brasileiros nos órgãos e eventos internacionais da advocacia.",
+        D: "Editar e alterar o Regulamento Geral, o Código de Ética e Disciplina, e os Provimentos que julgar necessários."
+      },
+      gabarito: "C",
+      anulada: false
+    },
+    {
+      numero: 154,
+      enunciado: "No intuito de garantir o regular exercício da prestação jurisdicional, a Constituição da República conferiu aos magistrados algumas prerrogativas. A respeito dessas prerrogativas, assinale a afirmativa correta.",
+      alternativas: {
+        A: "A inamovibilidade pode ser excepcionada no caso de relevante interesse público e desde que a remoção seja aprovada pela maioria absoluta do tribunal ou do CNJ.",
+        B: "A irredutibilidade de subsídios consiste na impossibilidade de redução do poder aquisitivo do subsídio do magistrado e não somente do seu valor nominal.",
+        C: "O magistrado, apesar da vitaliciedade, pode perder o cargo por decisão administrativa da maioria absoluta do tribunal ou do CNJ.",
+        D: "A aposentadoria dos magistrados seguirá regime jurídico diverso daquele aplicável aos servidores públicos em geral."
+      },
+      gabarito: "A",
+      anulada: false
+    },
+    {
+      numero: 155,
+      enunciado: "A competência para processar e julgar originariamente Governador de Estado por crime comum é do",
+      alternativas: {
+        A: "Supremo Tribunal Federal.",
+        B: "Superior Tribunal de Justiça.",
+        C: "Órgão Especial do Tribunal de Justiça.",
+        D: "Juizo Criminal da capital onde se situa o Tribunal de Justiça do Estado respectivo."
+      },
+      gabarito: "B",
+      anulada: false
+    },
+    {
+      numero: 156,
+      enunciado: "Lei estadual de iniciativa do Deputado “X” previu a criação de 300 cargos de fiscal de rendas e determinou o seu preenchimento no mesmo ano, sem indicar a previsão da receita necessária para fazer frente a tal despesa. Realizado o concurso público e depois da posse e exercício dos 100 primeiros aprovados, o Governador ajuíza ação direta de inconstitucionalidade perante o Supremo Tribunal Federal, arguindo a invalidade do diploma legal, por vício de iniciativa e por não indicar a fonte de receita necessária. Considerando as normas existentes a respeito do controle de constitucionalidade, assinale a alternativa que indica o correto posicionamento do STF.",
+      alternativas: {
+        A: "Não terá alternativa senão declarar a inconstitucionalidade da lei, por vício de iniciativa, com efeitos ex tunc, e julgar de plano inválido o concurso público, determinando a exoneração de todos os fiscais aprovados e a anulação dos atos por eles praticados.",
+        B: "Não poderá acatar os argumentos da ação direta, uma vez que o Governador foi quem autorizou a realização do concurso e deu posse aos candidatos, de modo que a ação proposta por ele mesmo viola a segurança jurídica, denotando conduta contraditória.",
+        C: "Deverá realizar uma ponderação de princípios e poderá, ao final, decidir pela constitucionalidade da lei e pela sua manutenção no ordenamento jurídico, apesar da afronta à Constituição, caso em que julgará improcedente a ação.",
+        D: "Poderá, ao declarar a inconstitucionalidade, e pelo voto de dois terços dos ministros, restringir os efeitos da decisão ou decidir que ela só tenha eficácia a partir de seu trânsito em julgado ou de outro momento que venha a ser fixado, preservando os atos já praticados pelos fiscais."
+      },
+      gabarito: "D",
+      anulada: false
+    },
+    {
+      numero: 157,
+      enunciado: "O Presidente da República encaminhou ao Senado Federal projeto de Lei Ordinária para provimento de cargos de servidores da União. Após os debates, o projeto foi aprovado pelo plenário do Senado Federal e, em seguida, encaminhado para a Câmara dos Deputados que, em apenas um turno de discussão e votação, o aprovou e o enviou ao Presidente da República, que o sancionou. Sobre o fato acima, assinale a afirmativa correta.",
+      alternativas: {
+        A: "A lei é inconstitucional, pois a iniciativa de projetos de lei para provimento de cargos de servidores da União é da Câmara dos Deputados.",
+        B: "A discussão e a votação do projeto deveriam ter se iniciado na Câmara dos Deputados, havendo, por isso, vício no processo legislativo.",
+        C: "A ocorrência de dois turnos de discussão e votação do projeto de lei ordinária, pressuposta no adequado processo legislativo, não ocorreu no caso narrado.",
+        D: "A lei é constitutional, pois o processo legislativo foi hígido."
+      },
+      gabarito: "B",
+      anulada: false
+    },
+    {
+      numero: 158,
+      enunciado: "A Assembleia Legislativa do Estado “M”, verificando que o Estado jamais regulamentou a aposentadoria especial dos servidores públicos cujas atividades sejam exercidas sob condições especiais que prejudiquem a saúde ou a integridade física (art. 40, § 4º, III da Constituição da República), edita lei complementar, de iniciativa do deputado “X”, que determina a aplicação dos mesmos critérios aplicados aos trabalhadores da iniciativa privada (previstos na Lei n. 8.213/91). O Governador do Estado sanciona a lei, que é publicada dias depois. Sobre o caso concreto apresentado, assinale a afirmativa correta.",
+      alternativas: {
+        A: "Há vício de iniciativa, devendo a regulamentação do regime dos servidores públicos ser estabelecida em lei de iniciativa do Chefe do Poder Executivo – no caso, o Governador do Estado.",
+        B: "Ainda que houvesse vício de iniciativa, a sanção pelo Governador do Estado supre tal vício, uma vez que se considera que a autoridade originalmente atribuída do poder de iniciativa ratificou as disposições da lei.",
+        C: "Não há vício de iniciativa, pois as matérias com reserva de iniciativa são somente aquelas que devem ser tratadas por meio de lei ordinária; as leis complementares, pela exigência de quorum qualificado, podem ser encaminhadas pelo Poder Executivo ou pelo Legislativo.",
+        D: "Somente existe vício de iniciativa se não tiver havido tempo razoável para o Poder Executivo encaminhar à Assembleia Legislativa o projeto de lei. Diante da inércia do Governador por diversos anos, pode a Assembleia suprir a mora, elaborando o projeto."
+      },
+      gabarito: "A",
+      anulada: false
+    },
+    {
+      numero: 159,
+      enunciado: "Pode o Presidente da República editar medida provisória contrária à súmula vinculante editada pelo STF?",
+      alternativas: {
+        A: "Não, pois o STF é o guardião da Constituição.",
+        B: "Não, pois a súmula vincula todos os Poderes (Executivo, Legislativo e Judiciário).",
+        C: "Sim, pois a súmula vincula a Administração Pública, mas não o chefe do Poder Executivo.",
+        D: "Sim, pois o Presidente da República estaria, nesse caso, exercendo função legislativa."
+      },
+      gabarito: "D",
+      anulada: false
+    },
+    {
+      numero: 160,
+      enunciado: "Sabendo‐se que o Município integra a Federação, assinale a afirmativa correta, à luz das normas constitucionais.",
+      alternativas: {
+        A: "O município será regido por Lei Orgânica própria, votada pela Assembleia Estadual.",
+        B: "A organização municipal conterá previsão de eleições para mandato de cinco anos, sem reeleição.",
+        C: "Um projeto de lei de iniciativa popular, baseado em interesse local, depende de, pelo menos, cinco por cento do eleitorado.",
+        D: "O limite máximo de dez vereadores deverá ser observado para localidades com até 15.000 (quinze mil) habitantes."
+      },
+      gabarito: "C",
+      anulada: false
+    },
+    {
+      numero: 161,
+      enunciado: "A Convenção sobre os Direitos da Criança estabelece que os Estados‐partes reconheçam a importância da função exercida pelos órgãos de comunicação social, devendo assegurar o acesso da criança à informação. Do mesmo modo o Estatuto da Criança e do Adolescente assegura que a informação é um direito da criança e do adolescente. Acerca da política de informação envolvendo menores, assinale a afirmativa correta.",
+      alternativas: {
+        A: "No que concerne às Medidas Específicas de Proteção, é incabível, qualquer que seja o estágio de compreensão da criança, prestar‐lhe informações sobre os motivos que determinam a intervenção, o que será informado apenas aos pais e responsáveis.",
+        B: "Deve haver o encorajamento dos órgãos de comunicação social a levar em conta as necessidades linguísticas das crianças indígenas ou que pertençam a um grupo minoritário.",
+        C: "Os proprietários das lojas que explorem a locação de fitas de programação respondem pela falta de informação no invólocro sobre a natureza da obra e faixa etária a que se destinam, isentando os funcionários e gerentes.",
+        D: "A criança tem direito à liberdade de expressão, que compreende, inclusive, liberdade de procurar, receber e expandir informações e ideias, sem restrições, de forma oral ou por qualquer outro meio à escolha da criança."
+      },
+      gabarito: "B",
+      anulada: false
+    },
+    {
+      numero: 162,
+      enunciado: "O Pacto de São José da Costa Rica estabelece que todas as pessoas são iguais perante a Lei, não se admitindo qualquer discriminação, sendo assegurada a proteção legal. No que tange ao direito indigenista, segundo a norma brasileira, assinale a afirmativa correta.",
+      alternativas: {
+        A: "As terras tradicionalmente ocupadas pelos índios destinam‐se a sua posse permanente, cabendo‐lhes o usufruto exclusivo das riquezas do solo, dos rios e dos lagos, irrelevante o interesse público da União, sendo nulos e não produzindo efeitos jurídicos os atos que tenham por objeto a ocupação, o domínio e a posse das terras.",
+        B: "Os índios e as comunidades indígenas ainda não integrados à comunhão nacional ficam sujeitos ao regime tutelar, mas qualquer índio poderá requerer ao juiz competente a sua liberação do regime tutelar, mesmo que não conheça a língua portuguesa.",
+        C: "O Ministério Público Federal, com exclusão de qualquer outro órgão público ou privado, deve promover a plena assistência ao índio e a defesa judicial ou extrajudicial dos direitos dos silvícolas e das comunidades indígenas.",
+        D: "Os atos praticados entre um índio não integrado e qualquer pessoa estranha à comunidade indígena, quando não tenha havido assistência do órgão tutelar competente, são nulos, salvo se o índio revelar consciência e conhecimento do ato praticado, desde que não lhe seja prejudicial, diante da extensão dos seus efeitos."
+      },
+      gabarito: "D",
+      anulada: false
+    },
+    {
+      numero: 163,
+      enunciado: "A Declaração Universal dos Direitos Humanos idealizou a figura do “ser humano livre”, caso fossem atendidos os elementos que criassem condições que permitissem que os indivíduos usufruíssem de direitos econômicos, sociais e culturais, além dos civis e políticos. No Brasil, a Lei n. 10.098/2003 criou mecanismos para a promoção da acessibilidade das pessoas portadoras de deficiência ou com mobilidade reduzida. A respeito de tais disposições legais, as afirmativas a seguir estão corretas, à exceção de uma. Assinale‐a.",
+      alternativas: {
+        A: "A pessoa portadora de deficiência ou com mobilidade reduzida é aquela que em caráter permanentemente, não temporário, tenha limitada sua capacidade de relacionar‐se com o meio e de utilizá‐lo.",
+        B: "O Programa Nacional de Acessibilidade dispõe de dotação orçamentária específica a fim de tratar de medidas de acessibilidade das pessoas portadoras de deficiência ou com mobilidade reduzida.",
+        C: "O Programa Nacional de Acessibilidade foi instituído no âmbito da Secretaria de Estado de Direitos Humanos do Ministério da Justiça.",
+        D: "Os edifícios de uso público, em que seja obrigatória a instalação de elevadores, devem atender ao requisito de percurso acessível que una a edificação à via pública, exigindo‐se o mesmo de edifícios de uso privado."
+      },
+      gabarito: "A",
+      anulada: false
+    },
+    {
+      numero: 164,
+      enunciado: "A respeito da autorização de trabalho a estrangeiro com vínculo empregatício no Brasil, assinale a afirmativa correta.",
+      alternativas: {
+        A: "Trata‐se de ato administrativo de competência do Ministério do Trabalho, para efeito de requerimento de visto permanente e/ou temporário, a estrangeiros que desejem trabalhar no Brasil.",
+        B: "O empregador deve se comprometer com o treinamento profissional, mas não é necessário haver correlação entre a atividade que o estrangeiro exercerá e sua qualificação/experiência anterior.",
+        C: "O empregador que pretender importar mão de obra deverá manter pelo menos metade das vagas da empresa ocupadas por brasileiros, que também devem responder por, pelo menos, metade da folha de salários.",
+        D: "Trata‐se de ato administrativo de competência do Ministério da Educação, que dispensa a autorização para o estrangeiro que haja concluído curso de pós‐graduação stricto sensu no Brasil ou tiver seu diploma estrangeiro revalidado."
+      },
+      gabarito: "A",
+      anulada: false
+    },
+    {
+      numero: 165,
+      enunciado: "Jean Pierre, cidadão estrangeiro, foi preso em flagrante em razão de suposta prática de crime de falsificação de passaporte com o objetivo de viabilizar sua permanência no Brasil. Diante dessa situação hipotética, assinale a afirmativa correta.",
+      alternativas: {
+        A: "A fraude para obter a entrada e permanência no território brasileiro constitui motivo suficiente para a expulsão do estrangeiro, cabendo, exclusivamente, ao Presidente da República, de forma discricionária, resolver sobre a conveniência e oportunidade da sua retirada compulsória do País.",
+        B: "O ilícito deverá ser apurado no âmbito do Ministério da Relações Exteriores, tornando desnecessária a instauração de processo administrativo ou inquérito para fins de apuração dos fatos que ensejam a expulsão.",
+        C: "O mérito do ato de expulsão é analisado mediante juízo de conveniência e oportunidade (discricionariedade), sendo descabido o ajuizamento de ação judicial para impugnar suposta lesão ou ameaça de lesão a direito, devendo, nesse caso, o juiz rejeitar a petição inicial por impossibilidade jurídica do pedido.",
+        D: "A fraude para obter entrada e permanência no território brasileiro não é motivo para fundamentar ato de expulsão de estrangeiro."
+      },
+      gabarito: "A",
+      anulada: false
+    },
+    {
+      numero: 166,
+      enunciado: "A respeito dos impostos, assinale a afirmativa correta.",
+      alternativas: {
+        A: "O Imposto de Transmissão Causa Mortis e Doação (ITCMD) de quaisquer bens e direitos terá suas alíquotas máximas fixadas pelos Estados competentes para a sua instituição.",
+        B: "As alíquotas máximas e mínimas do Imposto sobre Serviços de Qualquer Natureza (ISS) deverão ser fixados por lei complementar nacional.",
+        C: "O Imposto sobre Operações relativas à Circulação de Mercadorias e Prestação de Serviços de Transporte Interestadual e Intermunicipal e de Comunicação (ICMS) incidirá sobre as operações que destinem mercadorias e serviços ao exterior.",
+        D: "A União Federal deverá instituir, mediante lei complementar, na iminência ou no caso de guerra externa, impostos extraordinários, compreendidos ou não em sua competência tributária, os quais serão suprimidos, gradativamente, cessadas as causas de sua criação."
+      },
+      gabarito: "B",
+      anulada: false
+    },
+    {
+      numero: 167,
+      enunciado: "Mário inscreveu‐se no programa de incentivo à aposentadoria mediante indenização, promovido pela empresa em que trabalha. A respeito do caso proposto, assinale a afirmativa correta.",
+      alternativas: {
+        A: "Mário pagará imposto de renda, já que o valor recebido tem natureza salarial.",
+        B: "Mário não pagará imposto de renda, já que se trata de verba especial.",
+        C: "Mario não pagará imposto de renda, já que o valor recebido tem caráter indenizatório.",
+        D: "Mário pagará imposto de renda, em homenagem ao princípio da isonomia."
+      },
+      gabarito: "C",
+      anulada: false
+    },
+    {
+      numero: 168,
+      enunciado: "O Sr. Afrânio dos Santos, administrador da empresa “X”, que atua no ramo industrial, percebeu ter efetuado pagamento do IPI maior que o efetivamente devido, ao longo de certo período. Com base no cenário acima, para fins de aconselhar o administrador acerca da possibilidade de obtenção da restituição do montante recolhido a maior, assinale a afirmativa correta.",
+      alternativas: {
+        A: "Não é possível a restituição, pois o pagamento foi espontâneo, incidindo a máxima “quem paga mal paga duas vezes”.",
+        B: "Não é possível a restituição, pois, embora pago indevidamente, não cabe restituição de tributo indireto.",
+        C: "Cabe apenas pedido administrativo de restituição, em razão do pagamento indevido.",
+        D: "Cabe pedido judicial de repetição de indébito, desde que a empresa comprove ter assumido o referido encargo, sem tê‐lo transferido a terceiro."
+      },
+      gabarito: "D",
+      anulada: false
+    },
+    {
+      numero: 169,
+      enunciado: "O imposto cuja alíquota é invariável e se aplica sobre base de cálculo variável, é classificado como",
+      alternativas: {
+        A: "progressivo.",
+        B: "proporcional.",
+        C: "indireto.",
+        D: "pessoal."
+      },
+      gabarito: "B",
+      anulada: false
+    },
+    {
+      numero: 170,
+      enunciado: "Quanto às pessoas jurídicas que compõem a Administração Indireta, assinale a afirmativa correta.",
+      alternativas: {
+        A: "As autarquias são pessoas jurídicas de direito público, criadas por lei.",
+        B: "As autarquias são pessoas jurídicas de direito privado, autorizadas por lei.",
+        C: "As empresas públicas são pessoas jurídicas de direito público, criadas por lei.",
+        D: "As empresas públicas são pessoas jurídicas de direito privado, criadas para o exercício de atividades típicas do Estado."
+      },
+      gabarito: "A",
+      anulada: false
+    },
+    {
+      numero: 171,
+      enunciado: "Uma concessionária de serviço público, em virtude de sua completa inadequação na prestação do serviço, não consegue executar o contrato. Nesse caso, segundo a Lei n. 8.987/95, poderá ser declarada, a critério do poder concedente, a extinção do contrato por",
+      alternativas: {
+        A: "caducidade.",
+        B: "encampação.",
+        C: "anulação.",
+        D: "revogação."
+      },
+      gabarito: "A",
+      anulada: false
+    },
+    {
+      numero: 172,
+      enunciado: "A União, após regular licitação, realiza concessão de determinado serviço público a uma sociedade privada. Entretanto, para a efetiva prestação do serviço, é necessário realizar algumas desapropriações. A respeito desse caso concreto, assinale a afirmativa correta.",
+      alternativas: {
+        A: "A sociedade concessionária poderá promover desapropriações mediante autorização expressa, constante de lei ou contrato.",
+        B: "As desapropriações necessárias somente poderão ser realizadas pela União, já que a concessionária é pessoa jurídica de direito privado.",
+        C: "O ingresso de autoridades administrativas nos bens desapropriados, declarada a utilidade pública, somente será lícito após a obtenção de autorização judicial.",
+        D: "Os bens pertencentes ao(s) Município(s) inserido(s) na área de prestação do serviço não poderão ser desapropriados, mesmo que haja autorização legislativa."
+      },
+      gabarito: "A",
+      anulada: false
+    },
+    {
+      numero: 173,
+      enunciado: "Com a finalidade de minimizar as consequências dos problemas de trânsito na cidade “X”, o Prefeito estabeleceu, por meio de decreto de natureza genérica e abstrata, restrições à circulação de veículos na região central, proibindo a circulação de veículos e as operações de carga e descarga no período compreendido entre 6h e 22h, de segunda a sexta‐feira, em dias úteis, na área de abrangência especificada. Face a esse fato, a Associação Empresarial do ramo de transporte de mercadorias procura um advogado para orientá‐la na proteção de seus interesses. Com base na hipótese apresentada, assinale a alternativa que indica a linha de atuação mais apropriada proposta pelo advogado.",
+      alternativas: {
+        A: "Impetração de mandado de segurança contra o Decreto, ao argumento de que faltaria ao Município competência normativa para estabelecer a referida restrição.",
+        B: "Ajuizamento de ação de conhecimento com pedido de antecipação dos efeitos da tutela jurisdicional com a finalidade de suspender os efeitos do Decreto, ao argumento de vício de razoabilidade/proporcionalidade.",
+        C: "Impetração de mandado de segurança contra o Decreto, ao argumento de vício de razoabilidade/proporcionalidade.",
+        D: "Ajuizamento de ação de conhecimento com pedido de antecipação dos efeitos da tutela jurisdicional com a finalidade de suspender os efeitos do Decreto, ao argumento de que faltaria ao Município competência normativa para estabelecer a referida restrição."
+      },
+      gabarito: "B",
+      anulada: false
+    },
+    {
+      numero: 174,
+      enunciado: "Sílvio, servidor público, durante uma diligência com carro oficial do Estado X para o qual trabalha, se envolve em acidente de trânsito, por sua culpa, atingindo o carro de João. Considerando a situação acima e a evolução do entendimento sobre o tema, assinale a afirmativa correta.",
+      alternativas: {
+        A: "João deverá demandar Sílvio ou o Estado X, à sua escolha, porém, caso opte por demandar Sílvio, terá que comprovar a sua culpa, ao passo que o Estado responde independentemente dela.",
+        B: "João poderá demandar Sílvio ou o Estado X, à sua escolha, porém, caso opte por demandar Sílvio, presumir‐se‐á sua culpa, ao passo que o Estado responde independentemente dela.",
+        C: "João poderá demandar apenas o Estado X, já que Sílvio estava em serviço quando da colisão e, por isso, a responsabilidade objetiva é do Estado, que terá direito de regresso contra Sílvio, em caso de culpa.",
+        D: "João terá que demandar Sílvio e o Estado X, já que este último só responde caso comprovada a culpa de Sílvio, que, no entanto, será presumida por ser ele servidor do Estado (responsabilidade objetiva)."
+      },
+      gabarito: "C",
+      anulada: false
+    },
+    {
+      numero: 175,
+      enunciado: "O Presidente da República, considerando necessária a realização de diversas obras de infraestrutura, decide pela criação de uma nova Sociedade de Economia Federal e envia projeto de lei para o Congresso Nacional. Após a sua regular tramitação, o Congresso aprova a criação da Companhia “X”. Considerando a situação apresentada, assinale a afirmativa correta.",
+      alternativas: {
+        A: "A Companhia “X” poderá editar os decretos de utilidade pública das áreas que necessitam ser desapropriadas para consecução do objeto que justificou sua criação.",
+        B: "A Companhia “X” está sujeita à licitação e à contratação de obras, serviços, compras e alienações, observados os princípios da administração.",
+        C: "A Companhia “X” será necessariamente uma sociedade de propósito específico (SPE) e a maioria do capital social deverá sempre pertencer à União.",
+        D: "A Companhia “X” possui foro privilegiado e eventuais demandas judiciais correrão perante a Justiça Federal."
+      },
+      gabarito: "B",
+      anulada: false
+    },
+    {
+      numero: 176,
+      enunciado: "Sobre a Reserva Particular do Patrimônio Natural (RPPN), assinale a afirmativa correta.",
+      alternativas: {
+        A: "As RPPN’s são unidades de conservação criadas em áreas de posse e domínios privados, gravadas com perpetuidade, e deverão ser averbadas, por intermédio de Termo de Compromisso, no Registro Público de Imóveis",
+        B: "As RPPN’s são unidades de conservação criadas em áreas de posse pública e domínio privado, e deverão ser averbadas, por intermédio de Termo de Compromisso, no Registro Público de Imóveis",
+        C: "As RPPN’s são unidades de conservação criadas em áreas de posse e domínios privados, deverão ser averbadas, por intermédio de Termo de Compromisso, no Registro Público de Imóveis. Porém não serão perpétuas, em razão do direito fundamental à propriedade privada.",
+        D: "As RPPN’s são unidades de conservação criadas em áreas de posse pública e domínio privado. Em razão do princípio da defesa do meio ambiente são instituídas automaticamente, sem necessidade de avaliação do órgão ambiental, bastando o interesse do proprietário privado e a averbação, por intermédio de Termo de Compromisso, no Registro Público de Imóveis."
+      },
+      gabarito: "A",
+      anulada: false
+    },
+    {
+      numero: 177,
+      enunciado: "Luísa, residente e domiciliada na cidade de Recife, após visitar a Austrália, traz consigo para a sua casa um filhote de coala, animal típico daquele país e inexistente no Brasil. Tendo em vista tal situação, assinale a afirmativa correta.",
+      alternativas: {
+        A: "Ao trazer o animal, Luísa não cometeu qualquer ilícito ambiental já que a propriedade de animais domésticos é livre no Brasil.",
+        B: "Ao trazer o animal, Luísa, em princípio, não cometeu qualquer ilícito ambiental, pois o crime contra o meio ambiente só se configuraria caso Luísa abandonasse ou praticasse ações de crueldade contra o animal por ela adotado.",
+        C: "Ao trazer o animal, Luísa cometeu crime ambiental, pois o introduziu no Brasil sem prévio licenciamento ambiental, sendo a Justiça estadual de Pernambuco competente para julgar a eventual ação.",
+        D: "Ao trazer o animal, Luísa cometeu crime ambiental, pois o introduziu no Brasil sem licença e sem parecer técnico oficial favorável, sendo a Justiça Federal competente para julgar a eventual ação."
+      },
+      gabarito: "D",
+      anulada: false
+    },
+    {
+      numero: 178,
+      enunciado: "Com relação ao direito sucessório, assinale a afirmativa correta.",
+      alternativas: {
+        A: "O cônjuge sobrevivente, mesmo se constituir nova família, continuará a ter direito real de habitação sobre o imóvel em que residiu com seu finado cônjuge.",
+        B: "A exclusão por indignidade pode ocorrer a partir da necessidade de que o herdeiro tenha agido sempre com dolo e por uma conduta comissiva.",
+        C: "A deserdação é forma de afastar do processo sucessório tanto o herdeiro legítimo quanto o legatário.",
+        D: "Os efeitos da indignidade não retroagem à data da abertura da sucessão, tendo, portanto, efeito ex nunc."
+      },
+      gabarito: "A",
+      anulada: false
+    },
+    {
+      numero: 179,
+      enunciado: "Em relação aos defeitos dos negócios jurídicos, assinale a afirmativa incorreta.",
+      alternativas: {
+        A: "A emissão de vontade livre e consciente, que corresponda efetivamente ao que almeja o agente, é requisito de validade dos negócios jurídicos.",
+        B: "O erro acidental é o que recai sobre características secundárias do objeto, não sendo passível de levar à anulação do negócio.",
+        C: "A simulação é causa de anulação do negócio, e só poderá ocorrer se a parte prejudicada demonstrar cabalmente ter sido prejudicada por essa prática.",
+        D: "O objetivo da ação pauliana é anular o negócio praticado em fraude contra credores."
+      },
+      gabarito: "C",
+      anulada: false
+    },
+    {
+      numero: 180,
+      enunciado: "João dirigia seu veículo respeitando todas as normas de trânsito, com velocidade inferior à permitida para o local, quando um bêbado atravessou a rua, sem observar as condições de tráfego. João não teve condições de frear o veículo ou desviar‐se dele, atingindo‐o e causando‐lhe graves ferimentos. A partir do caso apresentado, assinale a afirmativa correta.",
+      alternativas: {
+        A: "Houve responsabilidade civil, devendo João ser considerado culpado por sua conduta.",
+        B: "Faltou um dos elementos da responsabilidade civil, qual seja, a conduta humana, não ficando configurada a responsabilidade civil.",
+        C: "Inexistiu um dos requisitos essenciais para caracterizar a responsabilidade civil: o dano indenizável e, por isso, não deve ser responsabilizado.",
+        D: "Houve rompimento do nexo de causalidade, em razão da conduta da vítima, não restando configurada a responsabilidade civil."
+      },
+      gabarito: "D",
+      anulada: false
+    },
+    {
+      numero: 181,
+      enunciado: "Utilizando‐se das regras afetas ao direito das obrigações, assinale a alternativa correta.",
+      alternativas: {
+        A: "Quando o pagamento de boa‐fé for efetuado ao credor putativo, somente será inválido se, em seguida, ficar demonstrado que não era credor.",
+        B: "Levando em consideração os elementos contidos na lei para o reconhecimento da onerosidade excessiva, é admissível assegurar que a regra se aplica às relações obrigacionais de execução diferida ou continuada.",
+        C: "Possui a quitação determinados requisitos que devem ser obrigatoriamente observados, tais como o valor da dívida, o nome do pagador, o tempo e o lugar do adimplemento, além da assinatura da parte credora, exigindo‐se também que a forma da quitação seja igual à forma do contrato.",
+        D: "O terceiro, interessado ou não, poderá efetuar o pagamento da dívida em seu próprio nome, ficando sempre sub‐rogado nos direitos da parte credora."
+      },
+      gabarito: "B",
+      anulada: false
+    },
+    {
+      numero: 182,
+      enunciado: "Embora sujeito às constantes mutações e às diferenças de contexto em que é aplicado, o conceito tradicional de contrato sugere que ele representa o acordo de vontades estabelecido com a finalidade de produzir efeitos jurídicos. Tomando por base a teoria geral dos contratos, assinale a afirmativa correta.",
+      alternativas: {
+        A: "A celebração de contrato atípico, fora do rol contido na legislação, não é lícita, pois as partes não dispõem da liberdade de celebrar negócios não expressamente regulamentados por lei.",
+        B: "A atipicidade contratual é possível, mas, de outro lado, há regra específica prevendo não ser lícita a contratação que tenha por objeto a herança de pessoa viva, seja por meio de contrato típico ou não.",
+        C: "A liberdade de contratar é limitada pela função social do contrato e os contratantes deverão guardar, assim na conclusão, como em sua execução, os princípios da probidade e da boa‐fé subjetiva, princípios esses ligados ao voluntarismo e ao individualismo que informam o nosso Código Civil.",
+        D: "Será obrigatoriamente declarado nulo o contrato de adesão que contiver cláusulas ambíguas ou contraditórias."
+      },
+      gabarito: "B",
+      anulada: false
+    },
+    {
+      numero: 183,
+      enunciado: "Em janeiro de 2010, Nádia, unida estavelmente com Rômulo, após dez anos de convivência e sem que houvesse entre eles contrato escrito que disciplinasse as relações entre companheiros, abandona definitivamente o lar. Nos dois anos seguintes, Rômulo, que não é proprietário de outro imóvel urbano ou rural, continuou, ininterruptamente, sem oposição de quem quer que fosse, na posse direta e exclusiva do imóvel urbano com 200 metros quadrados, cuja propriedade dividia com Nádia e que servia de moradia do casal. Em março de 2012, Rômulo – que nunca havia ajuizado ação de usucapião, de qualquer espécie, contra quem quer que fosse ‐ ingressou com ação de usucapião, pretendendo o reconhecimento judicial para adquirir integralmente o domínio do referido imóvel. Diante dessa situação hipotética, assinale a afirmativa correta.",
+      alternativas: {
+        A: "A pretensão de aquisição do domínio integral do imóvel por Rômulo é infundada, pois o prazo assinalado pelo Código Civil é de 10 (dez) anos.",
+        B: "A pretensão de aquisição do domínio integral do imóvel por Rômulo é infundada, pois a hipótese de abandono do lar, embora possa caracterizar a impossibilidade da comunhão de vida, não autoriza a propositura de ação de usucapião.",
+        C: "A pretensão de aquisição do domínio integral do imóvel por Rômulo é infundada, pois tal direito só existe para as situações em que as pessoas foram casadas sob o regime da comunhão universal de bens.",
+        D: "A pretensão de aquisição do domínio integral do imóvel por Rômulo preenche todos os requisitos previstos no Código Civil."
+      },
+      gabarito: "D",
+      anulada: false
+    },
+    // ──────────────────────────────────────────────
+    // VI EXAME DE ORDEM UNIFICADO
+    // ──────────────────────────────────────────────
+    {
+      numero: 184,
+      enunciado: "Mévio é advogado empregado de empresa de grande porte atuando como diretor jurídico e tendo vários colegas vinculados à sua direção. Instado por um dos diretores, escala um dos seus advogados para atuar em processo judicial litigioso, no interesse de uma das filhas do referido diretor. À luz das normas estatutárias, é correto afirmar que",
+      alternativas: {
+        A: "a defesa dos interesses dos familiares dos dirigentes da empresa está ínsita na atuação profissional do advogado empregado.",
+        B: "a atuação do advogado empregado nesses casos pode ocorrer voluntariamente, sem relação com o seu emprego.",
+        C: "a relação de emprego retira do advogado sua independência profissional, pois deve defender os interesses do patrão.",
+        D: "em casos de dedicação exclusiva, a jornada de trabalho máxima do advogado será de quatro horas diárias e de vinte horas semanais."
+      },
+      gabarito: "B",
+      anulada: false
+    },
+    {
+      numero: 185,
+      enunciado: "Terêncio, após intensa atividade advocatícia, é acometido por mal de origem psiquiátrica, mas diagnosticado como passível de cura após tratamento prolongado. Não podendo exercer os atos da vida civil, apresenta requerimento à OAB. No concernente ao tema, à luz das normas aplicáveis, é correto afirmar que é caso de",
+      alternativas: {
+        A: "cancelamento da inscrição como advogado.",
+        B: "impedimento ao exercício profissional, mantida a inscrição na OAB.",
+        C: "licença do exercício da atividade profissional.",
+        D: "penalidade de exclusão por doença."
+      },
+      gabarito: "C",
+      anulada: false
+    },
+    {
+      numero: 186,
+      enunciado: "Mévio, advogado, é procurado por Eulâmpia, que realiza consulta sobre determinado tema jurídico. Alguns meses depois, o advogado recebe uma intimação para prestar depoimento como testemunha em processo no qual Eulâmpia é ré, pelos fatos relatados por ela em consulta profissional. No concernente ao tema, à luz das normas estatutárias, é correto afirmar que",
+      alternativas: {
+        A: "o advogado deve comparecer ao ato e prestar depoimento como testemunha dos fatos.",
+        B: "é caso de recusa justificada ao depoimento por ter tido o advogado ciência dos fatos em virtude do exercício da profissão.",
+        C: "a simples consulta jurídica não é privativa de advogado, equiparada a mero aconselhamento protocolar.",
+        D: "o advogado poderá prestar o depoimento, mesmo contra sua vontade, desde que autorizado pelo cliente."
+      },
+      gabarito: "B",
+      anulada: false
+    },
+    {
+      numero: 187,
+      enunciado: "Após recebida representação disciplinar sem fundamentos, cabe ao relator designado pelo presidente do Conselho Seccional da OAB, à luz das normas aplicáveis,",
+      alternativas: {
+        A: "arquivar o processo ato contínuo.",
+        B: "propor ao presidente o arquivamento do processo.",
+        C: "designar data para a defesa oral pelo advogado.",
+        D: "julgar improcedente a representação."
+      },
+      gabarito: "B",
+      anulada: false
+    },
+    {
+      numero: 188,
+      enunciado: "Caio, próspero comerciante, contrata, para prestação de serviços profissionais de advocacia, Mévio, que se apresenta como advogado. O cliente outorga a devida procuração com poderes gerais para o foro. Usando o referido instrumento, ocorre a propositura de ação judicial em face de Trácio. Na contestação, o advogado do réu alega vício na representação, uma vez que Mévio não possui registro na OAB, consoante certidão que apresenta nos autos judiciais. Diante de tal circunstância, é correto afirmar que",
+      alternativas: {
+        A: "os atos praticados pelo suposto advogado não ofendem qualquer dispositivo legal.",
+        B: "verificada a ausência de inscrição profissional, deverá ser outorgado prazo para sua regularização.",
+        C: "os atos praticados por Mévio são nulos, pois foram praticados por pessoa não inscrita na OAB.",
+        D: "a declaração de nulidade dos atos processuais esgota o rol de atos sancionatórios."
+      },
+      gabarito: "C",
+      anulada: false
+    },
+    {
+      numero: 189,
+      enunciado: "Raul, advogado, é acusado, em processo disciplinar, de ter perdido prazos em diversos processos, de ter atuado contra os interesses dos seus clientes e de ter um número exagerado de indeferimento de petições iniciais, por ineptas, desconexas, com representações sucessivas à OAB. Em relação a tais circunstâncias, à luz das normas estatutárias, é correto afirmar que as condutas imputadas a Raul",
+      alternativas: {
+        A: "não caracterizam infração disciplinar.",
+        B: "são consideradas desvios processuais exclusivamente.",
+        C: "demandam atuação da OAB no sentido educativo.",
+        D: "caracterizam inépcia da atuação profissional."
+      },
+      gabarito: "D",
+      anulada: false
+    },
+    {
+      numero: 190,
+      enunciado: "Caio ajuíza ação em face da empresa Toupeira e Lontra S.A. buscando a devolução de numerário por ter recebido produto com defeito oculto. O pedido é julgado improcedente por ausência de provas. Houve recurso de apelação. No início do julgamento, o relator apresentou críticas à atuação do advogado do recorrente, que não teria instruído o processo adequadamente. Presente no julgamento, o advogado pediu a palavra, que lhe foi negada, por já ter apresentado sua sustentação oral. Com base no relato acima, de acordo com as normas estatutárias, é correto afirmar que",
+      alternativas: {
+        A: "a sustentação oral esgota a atividade do advogado no julgamento.",
+        B: "só esclarecimentos de situação de fato serão admitidos no caso.",
+        C: "somente em momento posterior poderá o advogado tomar providências.",
+        D: "é assegurado ao advogado o direito de usar a palavra para replicar a acusação feita contra ele, ainda que já proferida sua sustentação oral."
+      },
+      gabarito: "D",
+      anulada: false
+    },
+    {
+      numero: 191,
+      enunciado: "Mévio, advogado recém-formado com dificuldades de iniciar sua atividade profissional, propõe a colegas de bairro e de escola a participação percentual nos honorários dos clientes que receber para consultas ou que pretendam ajuizar ações judiciais. Consoante as normas aplicáveis, assinale a alternativa correta em relação à conduta de Mévio.",
+      alternativas: {
+        A: "Caracteriza agenciamento de causas com participação dos honorários.",
+        B: "É possível, desde que conste em contrato escrito entre as partes.",
+        C: "O agenciamento de clientela é admitido em situações peculiares como essa.",
+        D: "Desde que os serviços advocatícios sejam prestados por Mévio, inexiste infração disciplinar."
+      },
+      gabarito: "A",
+      anulada: false
+    },
+    {
+      numero: 192,
+      enunciado: "Daniel, advogado, resolve divulgar seus trabalhos contratando empresa de propaganda e marketing. Esta lhe apresenta um plano de ação, que inclui a contratação de jovens, homens e mulheres, para a distribuição de prospectos de propaganda do escritório, coloridos, indicando as especialidades de atuação e apresentando determinados temas que seriam considerados acessíveis à multidão de interessados. O projeto é realizado. Em relação a tal projeto, consoante as normas aplicáveis aos advogados, é correto afirmar que",
+      alternativas: {
+        A: "a moderna advocacia assume características empresariais e permite publicidade como a apresentada.",
+        B: "atividades moderadas como as sugeridas são admissíveis.",
+        C: "desde que autorizada pela OAB, a propaganda pode ser realizada.",
+        D: "existem restrições éticas à propaganda da advocacia, entre as quais as referidas no texto."
+      },
+      gabarito: "D",
+      anulada: false
+    },
+    {
+      numero: 193,
+      enunciado: "Semprônia, advogada há longos anos, é contratada para representar os interesses de Esculápio, que está preso à disposição da Justiça criminal. Ao procurar contatar seu cliente, verifica que ele está em penitenciária, considerado incomunicável, por determinação de normas regulamentares do sistema. Apesar disso, requer o acesso ao seu cliente, que foi indeferido. Consoante as normas legais e estatutárias, é correto afirmar que",
+      alternativas: {
+        A: "a atuação do advogado deve estar submetida aos regulamentos penitenciários, para a sua própria segurança.",
+        B: "os estabelecimentos penitenciários civis devem organizar as visitas dos advogados por ordem de chegada.",
+        C: "o advogado, quando for contatar o seu cliente em prisão, deve ser acompanhado por representante da OAB.",
+        D: "é ilegal vedar a presença do advogado no contato com seu cliente, ainda que considerado incomunicável."
+      },
+      gabarito: "D",
+      anulada: false
+    },
+    {
+      numero: 194,
+      enunciado: "No caso de arbitramento judicial de honorários, pela ausência de estipulação ou acordo em relação a eles, é correto afirmar, à luz das regras estatutárias, que",
+      alternativas: {
+        A: "os valores serão livremente arbitrados pelo juiz, sem parâmetros, devendo o advogado percebê-los.",
+        B: "a fixação dos honorários levará em conta o valor econômico da questão.",
+        C: "a tabela organizada pela OAB não é relevante para essa forma de fixação.",
+        D: "havendo acordo escrito, poderá ocorrer o arbitramento judicial de honorários."
+      },
+      gabarito: "B",
+      anulada: false
+    },
+    {
+      numero: 195,
+      enunciado: "Mévio, advogado de longa data, pretendendo despachar uma petição em processo judicial em curso perante a Comarca Y, é surpreendido com aviso afixado na porta do cartório de que o magistrado somente receberia para despacho petições que reputasse urgentes, devendo o advogado dirigir-se ao assessor principal do juiz para uma prévia triagem quanto ao assunto em debate. À luz das normas estatutárias, é correto afirmar que",
+      alternativas: {
+        A: "a organização do serviço cartorário é da competência do juiz, que pode estabelecer padrões de atendimento aos advogados.",
+        B: "a triagem realizada por assessor do juiz permite melhor eficiência no desempenho da atividade judicial e não colide com as normas estatutárias.",
+        C: "o advogado tem direito de dirigir-se diretamente ao magistrado no seu gabinete para despachar petições sem prévio agendamento.",
+        D: "a duração razoável do processo é princípio que permite a triagem dos atos dos advogados e o exercício dos seus direitos estatutários."
+      },
+      gabarito: "C",
+      anulada: false
+    },
+    {
+      numero: 196,
+      enunciado: "A respeito da Convenção sobre Eliminação de Todas as Formas de Discriminação contra a Mulher, ratificada pelo Brasil, assinale a alternativa correta.",
+      alternativas: {
+        A: "Uma vez que a Convenção tem como objetivo proteger um grupo específico, não pode ser considerada como um documento de proteção internacional dos direitos humanos.",
+        B: "A Convenção possui um protocolo facultativo, que permite a apresentação de denúncias sobre violação dos direitos por ela consagrados.",
+        C: "A Convenção permite que o Estado-parte adote, de forma definitiva, ações afirmativas para garantir a igualdade entre gêneros.",
+        D: "A Convenção traz em seu texto um mecanismo de proteção dos direitos que consagra, por meio de petições sobre violações, que podem ser protocoladas por qualquer Estado-parte."
+      },
+      gabarito: "B",
+      anulada: false
+    },
+    {
+      numero: 197,
+      enunciado: "O Pacto Internacional dos Direitos Econômicos, Sociais e Culturais e o Pacto Internacional dos Direitos Civis e Políticos preveem em seu texto mecanismos de proteção, efetivação e monitoramento dos Direitos Humanos consagrados em seus respectivos textos. É correto afirmar que, em ambos os pactos, encontra-se o seguinte mecanismo:",
+      alternativas: {
+        A: "envio de relatórios sobre medidas adotadas e progressos alcançados.",
+        B: "acusação de regresso de proteção dos direitos, que poderá ser protocolada por qualquer Estado-parte, inclusive o próprio analisado.",
+        C: "sistemática de petições, que deverão ser elaboradas e protocoladas por um Estado-parte diferente daquele que está sendo acusado.",
+        D: "envio de relatórios sobre medidas adotadas e progressos alcançados, que deverão ser elaborados e protocolados por um Estado-parte diferente daquele que está sendo analisado."
+      },
+      gabarito: "A",
+      anulada: false
+    },
+    {
+      numero: 198,
+      enunciado: "A Convenção Interamericana de Direitos Humanos dispõe que toda pessoa tem direito à vida, que deve ser protegida por lei, e que ninguém dela poderá ser privado arbitrariamente. A respeito da pena de morte, o documento afirma que",
+      alternativas: {
+        A: "é inadmissível a aplicação da pena de morte em qualquer circunstância, já que o direito à vida deve ser protegido por lei desde a concepção.",
+        B: "não se pode aplicar pena de morte aos delitos políticos, exceto se forem conexos a delitos comuns sujeitos a tal pena.",
+        C: "a pena de morte não pode ser imposta àquele que, no momento da perpetração do delito, for menor de dezoito anos, nem aplicada à mulher em estado gestacional.",
+        D: "não se admite que Estados promulguem pena de morte, exceto se já a tiverem aplicado e a tenham abolido, hipótese em que a tal pena poderá ser restabelecida."
+      },
+      gabarito: "C",
+      anulada: false
+    },
+    {
+      numero: 199,
+      enunciado: "A respeito dos Procuradores-Gerais de Justiça nos Estados e no Distrito Federal, é INCORRETO afirmar que",
+      alternativas: {
+        A: "podem ser destituídos pela Assembleia Legislativa (nos Estados) e pela Câmara Legislativa (no Distrito Federal).",
+        B: "podem ser reconduzidos somente uma vez.",
+        C: "devem ser integrantes da carreira e exercem o cargo por mandato de dois anos.",
+        D: "são nomeados pelo Governador (nos Estados) e pelo Presidente da República (no Distrito Federal)."
+      },
+      gabarito: "A",
+      anulada: false
+    },
+    {
+      numero: 200,
+      enunciado: "NÃO pode ser objeto de ação direta de inconstitucionalidade",
+      alternativas: {
+        A: "decreto que promulga tratado.",
+        B: "decreto legislativo que aprova tratado.",
+        C: "resolução.",
+        D: "súmula vinculante."
+      },
+      gabarito: "D",
+      anulada: false
+    },
+    {
+      numero: 201,
+      enunciado: "Suponha que o STF, no exame de um caso concreto (controle difuso), tenha reconhecido a incompatibilidade entre uma lei em vigor desde 1987 e a Constituição de 1988. Nesse caso, é correto afirmar que",
+      alternativas: {
+        A: "após reiteradas decisões no mesmo sentido, o STF poderá editar súmula vinculante.",
+        B: "o STF deverá encaminhar a decisão ao Senado.",
+        C: "os órgãos fracionários dos tribunais, a partir de então, ficam dispensados de encaminhar a questão ao pleno.",
+        D: "a eficácia da decisão é erga omnes."
+      },
+      gabarito: "A",
+      anulada: false
+    },
+    {
+      numero: 202,
+      enunciado: "João, residente no Brasil há cinco anos, é acusado em outro país de ter cometido crime político. Nesse caso, o Brasil",
+      alternativas: {
+        A: "pode conceder a extradição se João for estrangeiro.",
+        B: "pode conceder a extradição se João for brasileiro naturalizado e tiver cometido o crime antes da naturalização.",
+        C: "não pode conceder a extradição, independentemente da nacionalidade de João.",
+        D: "não pode conceder a extradição apenas se João for brasileiro nato."
+      },
+      gabarito: "C",
+      anulada: false
+    },
+    {
+      numero: 203,
+      enunciado: "A respeito dos direitos políticos, assinale a alternativa correta.",
+      alternativas: {
+        A: "O cancelamento de naturalização por decisão do Ministério da Justiça é caso de perda de direitos políticos.",
+        B: "A condenação criminal transitada em julgado, enquanto durarem seus efeitos, é caso de cassação de direitos políticos.",
+        C: "A improbidade administrativa é caso de suspensão de direitos políticos.",
+        D: "A incapacidade civil relativa é caso de perda de direitos políticos."
+      },
+      gabarito: "C",
+      anulada: false
+    },
+    {
+      numero: 204,
+      enunciado: "A Constituição assegura, entre os direitos e garantias individuais, a inviolabilidade do domicílio, afirmando que “a casa é asilo inviolável do indivíduo, ninguém nela podendo penetrar sem o consentimento do morador” (art. 5º, XI, CRFB). A esse respeito, assinale a alternativa correta.",
+      alternativas: {
+        A: "O conceito de “casa” é abrangente e inclui quarto de hotel.",
+        B: "O conceito de casa é abrangente, mas não inclui escritório de advocacia.",
+        C: "A prisão em flagrante durante o dia é um limite a essa garantia, mas apenas quando houver mandado judicial.",
+        D: "A prisão em quarto de hotel obedecendo a mandado judicial pode se dar no período noturno."
+      },
+      gabarito: "A",
+      anulada: false
+    },
+    {
+      numero: 205,
+      enunciado: "Assinale a alternativa que relacione corretamente o cargo político e o sistema eleitoral adotado.",
+      alternativas: {
+        A: "Governador: sistema proporcional de dois turnos.",
+        B: "Prefeito: sistema majoritário de maioria simples para municípios com menos de 200 mil eleitores.",
+        C: "Congressista: sistema proporcional.",
+        D: "Vereador: sistema distrital."
+      },
+      gabarito: "B",
+      anulada: false
+    },
+    {
+      numero: 206,
+      enunciado: "A sociedade empresária do ramo de comunicações A Notícia Brasileira, com sede no Brasil, celebrou contrato internacional de prestação de serviços de informática com a sociedade empresária Santiago Info, com sede em Santiago. O contrato foi celebrado em Buenos Aires, capital argentina, tendo sido estabelecido como foro de eleição pelas partes Santiago, se porventura houver a necessidade de resolução de litígio entre as partes. Diante da situação exposta, à luz das regras de Direito Internacional Privado veiculadas na Lei de Introdução às Normas do Direito Brasileiro (LINDB) e no estatuto processual civil pátrio (Código de Processo Civil – CPC), assinale a alternativa correta.",
+      alternativas: {
+        A: "No tocante à regência das obrigações previstas no contrato, aplica-se a legislação chilena, já que Santiago foi eleito o foro competente para se dirimir eventual controvérsia.",
+        B: "Nos contratos internacionais, a lei que rege a capacidade das partes pode ser diversa da que rege o contrato. É o que se verifica no caso exposto acima.",
+        C: "Como a execução da obrigação avençada entre as partes se dará no Brasil, aplica-se, obrigatoriamente, no tocante ao cumprimento do contrato, a legislação brasileira.",
+        D: "A Lei de Introdução às Normas do Direito Brasileiro veda expressamente o foro de eleição, razão pela qual é nula ipso jure a cláusula estabelecida pelas partes nesse sentido."
+      },
+      gabarito: "B",
+      anulada: false
+    },
+    {
+      numero: 207,
+      enunciado: "Arnaldo Butti, cidadão brasileiro, falece em Roma, Itália, local onde residia e tinha domicílio. Em seu testamento, firmado em sua residência poucos dias antes de sua morte, Butti, que não tinha herdeiros naturais, deixou um imóvel localizado na Avenida Atlântica, na cidade do Rio de Janeiro, para Júlia, neta de sua enfermeira, que vive no Brasil. Inconformada com a partilha, Fernanda, brasileira, sobrinha-neta do falecido, que há dois anos vivia de favor no referido imóvel, questiona no Judiciário brasileiro a validade do testamento. Alega, em síntese, que, embora obedecesse a todas as formalidades previstas na lei italiana, o ato não seguiu todas as formalidades preconizadas pela lei brasileira. Com base na hipótese acima aventada, assinale a alternativa correta.",
+      alternativas: {
+        A: "Fernanda tem razão em seu questionamento, pois a sucessão testamentária de imóvel localizado no Brasil rege-se, inclusive quanto à forma, pela lei do local onde a coisa se situa (lex rei sitae).",
+        B: "Fernanda tem razão em questionar a validade do testamento, pois a Lei de Introdução às Normas do Direito Brasileiro veda a partilha de bens imóveis situados no Brasil por ato testamentário firmado no exterior.",
+        C: "Fernanda não tem razão em questionar a validade do testamento, pois o ato testamentário se rege, quanto à forma, pela lei do local onde foi celebrado (locus regit actum).",
+        D: "O questionamento de Fernanda não será apreciado, pois a Justiça brasileira não possui competência para conhecer e julgar o mérito de ações que versem sobre atos testamentários realizados no exterior."
+      },
+      gabarito: "C",
+      anulada: false
+    },
+    {
+      numero: 208,
+      enunciado: "Considerando os princípios norteadores do Estatuto da Criança e do Adolescente, a prática de atos infracionais fica sujeita a medidas que têm objetivos socioeducativos. Nesse sentido, é correto afirmar que",
+      alternativas: {
+        A: "se Aroldo, que tem 11 anos, subtrair para si coisa alheia pertencente a uma creche, deverá cumprir medida socioeducativa de prestação de serviços comunitários, por período não superior a um ano.",
+        B: "a obrigação de reparar o dano causado pelo ato infracional não é considerada medida socioeducativa, tendo em vista que o adolescente não pode ser responsabilizado civilmente.",
+        C: "o acolhimento institucional e a colocação em família substituta podem ser aplicados como medidas protetivas ou socioeducativas, a depender das características dos atos infracionais praticados.",
+        D: "a internação, como uma das medidas socioeducativas previstas pelo ECA, não poderá exceder o período máximo de três anos, e a liberação será compulsória aos 21 anos de idade."
+      },
+      gabarito: "D",
+      anulada: false
+    },
+    {
+      numero: 209,
+      enunciado: "Um famoso casal de artistas residente e domiciliado nos Estados Unidos, em viagem ao Brasil para o lançamento do seu mais novo filme, se encantou por Caio, de 4 anos, a quem pretende adotar. Caio teve sua filiação reconhecida exclusivamente pela mãe Isabel, que, após uma longa conversa com o casal, concluiu que o melhor para o filho era ser adotado, tendo em vista que o famoso casal possuía condições infinitamente melhores de bem criar e educar Caio. Além disso, Isabel ficou convencida do amor espontâneo e sincero que o casal de imediato nutriu pelo menino. Ante a situação hipotética, é correto afirmar que",
+      alternativas: {
+        A: "a adoção só é concedida quando for impossível manter a criança ou o adolescente em sua família, razão pela qual o consentimento de Isabel é irrelevante para a apreciação do pedido do famoso casal, que será deferido caso represente o melhor interesse de Caio.",
+        B: "independentemente da manifestação de vontade de Isabel, o famoso casal terá prioridade na adoção de Caio, depois de esgotadas todas as possibilidades de colocação de Caio em uma família brasileira.",
+        C: "tendo em vista o consentimento da mãe de Caio, o famoso casal terá prioridade em sua adoção em face de outros casais já previamente inscritos nos cadastros de interessados na adoção, mantidos pela Justiça da Infância e da Juventude.",
+        D: "a adoção internacional é medida excepcional; entretanto, em virtude do consentimento de Isabel para a adoção de seu filho pelo famoso casal, este só não terá prioridade se houver casal de brasileiro, residente no Brasil, habilitado para a adoção."
+      },
+      gabarito: "D",
+      anulada: false
+    },
+    {
+      numero: 210,
+      enunciado: "Luiz Fernando, servidor público estável pertencente aos quadros de uma fundação pública federal, inconformado com a pena de demissão que lhe foi aplicada, ajuizou ação judicial visando à invalidação da decisão administrativa que determinou a perda do seu cargo público. A decisão judicial acolheu a pretensão de Luiz Fernando e invalidou a penalidade disciplinar de demissão. Diante da situação hipotética narrada, Luiz Fernando deverá ser",
+      alternativas: {
+        A: "reintegrado ao cargo anteriormente ocupado, ou no resultante de sua transformação, com ressarcimento de todas as vantagens.",
+        B: "aproveitado no cargo anteriormente ocupado ou em outro cargo de vencimentos e responsabilidades compatíveis com o anterior, sem ressarcimento das vantagens pecuniárias.",
+        C: "readaptado em cargo de atribuições e responsabilidades compatíveis, com ressarcimento de todas as vantagens.",
+        D: "reconduzido ao cargo anteriormente ocupado ou em outro de vencimentos e responsabilidades compatíveis com o anterior, com ressarcimento de todas as vantagens pecuniárias."
+      },
+      gabarito: "A",
+      anulada: false
+    },
+    {
+      numero: 211,
+      enunciado: "Durante competição esportiva (campeonato estadual de futebol), o clube “A” foi punido com a perda de um ponto em virtude de episódios de preconceito por parte de sua torcida. Com essa decisão de primeira instância da justiça desportiva, o clube “B” foi declarado campeão naquele ano. O clube “A” apresentou recurso contra a decisão de primeira instância. Antes mesmo do julgamento desse recurso, distribuiu ação ordinária perante a Justiça Estadual com o objetivo de reaver o ponto que lhe fora retirado pela Justiça arbitral. Diante de tal situação, é correto afirmar que",
+      alternativas: {
+        A: "como o direito brasileiro adotou o sistema de jurisdição una, tendo o Poder Judiciário o monopólio da apreciação, com força de coisa julgada, de lesão ou ameaça a direito, é cabível a apreciação judicial dessa matéria a qualquer tempo.",
+        B: "as decisões da Justiça Desportiva são inquestionáveis na via judicial, uma vez que vige, no direito brasileiro, sistema pelo qual o Poder Judiciário somente pode decidir matérias para as quais não exista tribunal administrativo específico.",
+        C: "como regra, o ordenamento vigente adota o Princípio da Inafastabilidade da Jurisdição (art. 5º, XXXV, da CRFB); todavia, as decisões da Justiça Desportiva consubstanciam exceção a essa regra, já que são insindicáveis na via judicial.",
+        D: "o Poder Judiciário pode rever decisões proferidas pela Justiça Desportiva; ainda assim, exige-se, anteriormente ao ajuizamento da ação cabível, o esgotamento da instância administrativa, por se tratar de exceção prevista na Constituição."
+      },
+      gabarito: "D",
+      anulada: false
+    },
+    {
+      numero: 212,
+      enunciado: "Joana D´Arc, beneficiária de pensão por morte deixada por ex-fiscal de rendas, falecido em 5/1/1999, ajuizou ação ordinária em face da União, alegando que determinado aumento remuneratório genérico concedido aos fiscais de renda em atividade não lhe teria sido repassado. Assim, isso teria violado a regra constitucional da paridade remuneratória entre ativos, inativos e pensionistas. Acerca de tal alegação, é correto afirmar que é manifestamente",
+      alternativas: {
+        A: "procedente, pois, embora a regra da paridade remuneratória entre ativos, inativos e pensionistas tenha sido revogada pela EC 41/2003, a pensão por morte rege-se pela lei vigente à época do óbito, quando ainda vigia tal regra.",
+        B: "improcedente, pois, nos termos do verbete 339 da Súmula de Jurisprudência do STF, não cabe ao Poder Judiciário, que não tem função legislativa, aumentar vencimentos de servidores públicos sob fundamento de isonomia.",
+        C: "improcedente, pois a regra da paridade remuneratória entre ativos, inativos e pensionistas foi revogada pela EC 41/2003, sendo absolutamente irrelevante o fato de o ex-servidor ter falecido antes da edição da referida emenda.",
+        D: "procedente, pois a CRFB garante o reajustamento da pensão por morte dos benefícios para preservar-lhes, em caráter permanente, o valor real, conforme critérios estabelecidos em lei."
+      },
+      gabarito: "A",
+      anulada: false
+    },
+    {
+      numero: 213,
+      enunciado: "Quatro municípios celebram um consórcio público para desenvolverem um projeto comum para o tratamento industrial de lixo coletado em suas respectivas áreas, criando uma pessoa jurídica para gerenciar as atividades do consórcio. À luz da legislação aplicável, assinale a alternativa correta.",
+      alternativas: {
+        A: "Como se trata de atividade tipicamente estatal, essa pessoa jurídica administrativa deverá ser obrigatoriamente uma autarquia, criada por lei oriunda do maior município celebrante do pacto.",
+        B: "O ordenamento jurídico brasileiro admite, no caso, tanto a criação de uma pessoa jurídica de direito público (a chamada associação pública) quanto de direito privado.",
+        C: "O ordenamento jurídico brasileiro não admite a criação de uma entidade desse tipo, pois as pessoas jurídicas integrantes da Administração Indireta são apenas as indicadas no art. 5º do Decreto-Lei 200/67.",
+        D: "A pessoa jurídica oriunda de um consórcio público não poderá ser, em hipótese alguma, uma pessoa jurídica de direito privado, pois isso não é admitido pela legislação aplicável."
+      },
+      gabarito: "B",
+      anulada: false
+    },
+    {
+      numero: 214,
+      enunciado: "Ambulância do Corpo de Bombeiros envolveu-se em acidente de trânsito com automóvel dirigido por particular, que trafegava na mão contrária de direção. No acidente, o motorista do automóvel sofreu grave lesão, comprometendo a mobilidade de um dos membros superiores. Nesse caso, é correto afirmar que",
+      alternativas: {
+        A: "existe responsabilidade objetiva do Estado em decorrência da prática de ato ilícito, pois há nexo causal entre o dano sofrido pelo particular e a conduta do agente público.",
+        B: "não haverá o dever de indenizar se ficar configurada a culpa exclusiva da vítima, que dirigia na contramão, excluindo a responsabilidade do Estado.",
+        C: "não se cogita de responsabilidade objetiva do Estado porque não houve a chamada culpa ou falha do serviço. E, de todo modo, a indenização do particular, se cabível, ficaria restrita aos danos materiais, pois o Estado não responde por danos morais.",
+        D: "está plenamente caracterizada a responsabilidade civil do Estado, que se fundamenta na teoria do risco integral."
+      },
+      gabarito: "B",
+      anulada: false
+    },
+    {
+      numero: 215,
+      enunciado: "A autorização de uso de bem público por particular caracteriza-se como ato administrativo",
+      alternativas: {
+        A: "discricionário e bilateral, ensejando indenização ao particular no caso de revogação pela administração.",
+        B: "unilateral, discricionário e precário, para atender interesse predominantemente particular.",
+        C: "bilateral e vinculado, efetivado mediante a celebração de um contrato com a administração pública, de forma a atender interesse eminentemente público.",
+        D: "discricionário e unilateral, empregado para atender a interesse predominantemente público, formalizado após a realização de licitação."
+      },
+      gabarito: "B",
+      anulada: false
+    },
+    {
+      numero: 216,
+      enunciado: "Francis, brasileira, empresária, ao se deslocar do Rio de Janeiro para São Paulo em seu helicóptero particular, sofreu terrível acidente que culminou com a queda do aparelho em alto-mar. Após sucessivas e exaustivas buscas, feitas pelas autoridades e por empresas privadas contratadas pela família da vítima, infelizmente não foram encontrados os corpos de Francis e de Adilson, piloto da aeronave. Tendo sido esgotados os procedimentos de buscas e averiguações, de acordo com os artigos do Código Civil que regulam a situação supramencionada, é correto afirmar que o assento de óbito em registro público",
+      alternativas: {
+        A: "independe de qualquer medida administrativa ou judicial, desde que seja constatada a notória probabilidade de morte de pessoa que estava em perigo de vida.",
+        B: "depende exclusivamente de procedimento administrativo quanto à morte presumida junto ao Registro Civil das Pessoas Naturais.",
+        C: "depende de prévia ação declaratória judicial quanto à morte presumida, sem necessidade de decretação judicial de ausência.",
+        D: "depende de prévia declaração judicial de ausência, por se tratar de desaparecimento de uma pessoa sem dela haver notícia."
+      },
+      gabarito: "C",
+      anulada: false
+    },
+    {
+      numero: 217,
+      enunciado: "A condição, o termo e o encargo são considerados elementos acidentais, facultativos ou acessórios do negócio jurídico, e têm o condão de modificar as consequências naturais deles esperadas. A esse respeito, é correto afirmar que",
+      alternativas: {
+        A: "se considera condição a cláusula que, derivando da vontade das partes ou de terceiros, subordina o efeito do negócio jurídico a evento futuro e incerto.",
+        B: "se for resolutiva a condição, enquanto esta se não realizar, não vigorará o negócio jurídico, não se podendo exercer desde a conclusão deste o direito por ele estabelecido.",
+        C: "o termo inicial suspende o exercício, mas não a aquisição do direito e, salvo disposição legal ou convencional em contrário, computam-se os prazos, incluindo o dia do começo e excluindo o do vencimento.",
+        D: "se considera não escrito o encargo ilícito ou impossível, salvo se constituir o motivo determinante da liberalidade, caso em que se invalida o negócio jurídico."
+      },
+      gabarito: "D",
+      anulada: false
+    },
+    {
+      numero: 218,
+      enunciado: "Diogo, proprietário de um terreno urbano localizado no Município de Vila Formosa, autorizou Rafael, dono de uma transportadora, a utilizar parte desse terreno como garagem. Passados alguns meses de uso, Rafael, sem autorização de Diogo, construiu um galpão coberto com objetivo de proteger sua frota da chuva e do sol. Com o crescimento dos negócios, Rafael ampliou o galpão e ali montou uma oficina para realizar a manutenção dos seus veículos. Verificando uma oportunidade de negócio, Rafael passou a prestar serviços mecânicos a terceiros. Considerando a situação hipotética e as regras atinentes à acessão artificial, assinale a alternativa correta.",
+      alternativas: {
+        A: "Configurará aquisição por acessão invertida se o valor das construções realizadas por Rafael ultrapassar consideravelmente o valor do terreno.",
+        B: "Mesmo que Rafael estivesse agindo de má-fé quando da realização da construção no terreno de Diogo, teria direito à indenização das benfeitorias úteis para evitar enriquecimento sem causa deste.",
+        C: "A acessão decorrente de construção é forma de aquisição derivada da propriedade.",
+        D: "As acessões artificiais podem ser equiparadas às benfeitorias úteis, sobretudo quando representarem instrumento apropriado para conservação do bem principal."
+      },
+      gabarito: "A",
+      anulada: false
+    },
+    {
+      numero: 219,
+      enunciado: "Mirtes gosta de decorar a janela de sua sala com vasos de plantas. A síndica do prédio em que Mirtes mora já advertiu a moradora do risco de queda dos vasos e de possível dano aos transeuntes e moradores do prédio. Num dia de forte ventania, os vasos de Mirtes caíram sobre os carros estacionados na rua, causando sérios prejuízos. Nesse caso, é correto afirmar que Mirtes",
+      alternativas: {
+        A: "poderá alegar motivo de força maior e não deverá indenizar os lesados.",
+        B: "está isenta de responsabilidade, pois não teve a intenção de causar prejuízo.",
+        C: "somente deverá indenizar os lesados se tiver agido dolosamente.",
+        D: "deverá indenizar os lesados, pois é responsável pelo dano causado."
+      },
+      gabarito: "D",
+      anulada: false
+    },
+    {
+      numero: 220,
+      enunciado: "José, solteiro, possui três irmãos: Raul, Ralph e Randolph. Raul era pai de Mauro e Mário. Mário era pai de Augusto e Alberto. Faleceram, em virtude de acidente automobilístico, Raul e Mário, na data de 15/4/2005. Posteriormente, José veio a falecer em 1º/5/2006. Sabendo-se que a herança de José é de R$ 90.000,00, como ficará a partilha de seus bens?",
+      alternativas: {
+        A: "Como José não possui descendente, a partilha deverá ser feita entre os irmãos. E, como não há direito de representação entre os filhos de irmão, Ralph e Randolph receberão cada um R$ 45.000,00.",
+        B: "Ralph e Randolph devem receber R$ 30.000,00 cada. A parte que caberá a Raul deve ser repartida entre Mauro e Mário. Sendo Mário pré-morto, seus filhos Alberto e Augusto devem receber a quantia que lhe caberia. Assim, Mauro deve receber R$ 15.0000,00, e Alberto e Augusto devem receber R$ 7.500,00 cada um.",
+        C: "Ralph e Randolph receberão R$ 30.000,00 cada um. O restante (R$ 30.000,00) será entregue a Mauro, por direito de representação de seu pai pré-morto.",
+        D: "Ralph e Randolph receberão R$ 30.000,00 cada um. O restante, na falta de outro colateral vivo, será entregue ao Município, Distrito Federal ou União."
+      },
+      gabarito: "C",
+      anulada: false
+    },
+    {
+      numero: 221,
+      enunciado: "Marcelo, brasileiro, solteiro, advogado, sem que tenha qualquer impedimento para doar a casa de campo de sua livre propriedade, resolve fazê-lo, sem quaisquer ônus ou encargos, em benefício de Marina, sua amiga, também absolutamente capaz. Todavia, no âmbito do contrato de doação, Marcelo estipula cláusula de reversão por meio da qual o bem doado deverá se destinar ao patrimônio de Rômulo, irmão de Marcelo, caso Rômulo sobreviva à donatária. A respeito dessa situação, é correto afirmar que",
+      alternativas: {
+        A: "diante de expressa previsão legal, não prevalece a cláusula de reversão estipulada em favor de Rômulo.",
+        B: "no caso, em razão de o contrato de doação, por ser gratuito, comportar interpretação extensiva, a cláusula de reversão em favor de terceiro é válida.",
+        C: "a cláusula em exame não é válida em razão da relação de parentesco entre o doador, Marcelo, e o terceiro beneficiário, Rômulo.",
+        D: "diante de expressa previsão legal, a cláusula de reversão pode ser estipulada em favor do próprio doador ou de terceiro beneficiário por aquele designado, caso qualquer deles, nessa ordem, sobreviva ao donatário."
+      },
+      gabarito: "A",
+      anulada: false
+    },
+    {
+      numero: 222,
+      enunciado: "Rejane, solteira, com 16 anos de idade, órfã de mãe e devidamente autorizada por seu pai, casa-se com Jarbas, filho de sua tia materna, sendo ele solteiro e capaz, com 23 anos de idade. A respeito do casamento realizado, é correto afirmar que é",
+      alternativas: {
+        A: "nulo, tendo em vista o parentesco existente entre Rejane e Jarbas.",
+        B: "é anulável, tendo em vista que, por ser órfã de mãe, Rejane deveria obter autorização judicial a fim de suprir o consentimento materno.",
+        C: "válido.",
+        D: "anulável, tendo em vista o parentesco existente entre Rejane e Jarbas."
+      },
+      gabarito: "C",
+      anulada: false
+    },
+    {
+      numero: 223,
+      enunciado: "Os atos processuais não dependem de forma determinada, salvo se a lei expressamente o exigir e, ainda que realizados de outro modo, serão reputados válidos se preencherem a finalidade essencial. A respeito do tema, é correto afirmar que",
+      alternativas: {
+        A: "compete às partes alegar nulidade dos atos na primeira oportunidade que lhes couber falar nos autos, sob pena de preclusão, exceto se a parte provar justo impedimento ou se a nulidade tiver que ser conhecida de ofício.",
+        B: "é defesa a distribuição da petição inicial que não esteja acompanhada do instrumento de mandato, ainda que haja procuração junta aos autos principais.",
+        C: "na hipótese de o réu apresentar reconvenção, dispensa-se a determinação de anotação pelo distribuidor, visto que será julgada simultaneamente à ação principal, na mesma sentença.",
+        D: "se um ato for anulado, ou a nulidade afetar apenas parte do ato, nenhum efeito terão os atos subsequentes, prejudicando todos os que com aquele ou com a parte nula guardem ou não dependência."
+      },
+      gabarito: "A",
+      anulada: false
+    },
+    {
+      numero: 224,
+      enunciado: "A Lei Civil afirma que, a despeito de a personalidade civil da pessoa começar com o nascimento com vida, ao nascituro serão assegurados os seus direitos desde a concepção. Para tanto, é correto afirmar que, na ação de posse em nome de nascituro,",
+      alternativas: {
+        A: "a nomeação de médico pelo juiz para que emita laudo que comprove o estado de gravidez da requerente, assim previsto na lei processual civil, não poderá ser dispensado em qualquer hipótese.",
+        B: "por se tratar de mera expectativa de nascimento com vida, portanto, não tendo o nascituro personalidade civil, fica dispensada a intervenção do Ministério Público na causa.",
+        C: "reconhecida a gravidez, a sentença declarará que seja a requerente investida na posse dos direitos que assistam ao nascituro; não cabendo àquela o exercício do pátrio poder, o juiz nomeará curador.",
+        D: "são documentos indispensáveis à ação o laudo comprobatório do estado gestacional emitido pelo médico nomeado pelo juiz e a certidão de óbito da pessoa de quem o nascituro é sucessor."
+      },
+      gabarito: "C",
+      anulada: false
+    },
+    {
+      numero: 225,
+      enunciado: "No curso de um processo, todos os participantes, a qualquer título, devem agir de forma leal, litigando de boa-fé e tendo por paradigma uma atuação ética. A relação entre advogados, partes e o magistrado deve obedecer, de forma bastante acentuada, essas premissas, sob pena de se estabelecer, conforme o caso, uma série de responsabilidades de ordem processual e/ou pessoal em face daquele que faltou com os deveres que lhe cabiam. Especificamente acerca da atuação dos magistrados nos processos judiciais, é correto afirmar que",
+      alternativas: {
+        A: "é dever do magistrado declarar-se impedido ou suspeito de ofício. Em caso de abstenção por parte do juiz, poderá a parte que desejar fazê-lo arguir o impedimento ou a suspeição do magistrado por meio de exceção.",
+        B: "o magistrado tem, entre outros deveres, a obrigação de sentenciar e de garantir o contraditório. Conforme previsto pelo sistema processual, só pode o magistrado se abster de julgar se alegar e comprovar a existência de lacuna na lei.",
+        C: "o juiz é dotado de independência funcional, podendo, como regra geral, decidir conforme seu convencimento, sem que de sua atuação surja o dever de indenizar qualquer das partes. Tal dever só surgirá quando o juiz agir com culpa, dolo ou fraude, gerando prejuízo a uma das partes.",
+        D: "a atuação do magistrado encontra claros limites no sistema processual, a fim de permitir que a própria sociedade exerça o devido controle sobre sua atuação. Um desses limites está refletido na regra que veda a produção de provas de ofício pelo juiz."
+      },
+      gabarito: "A",
+      anulada: false
+    },
+    {
+      numero: 226,
+      enunciado: "A respeito dos atos e responsabilidades das partes e dos procuradores, de acordo com o Código de Processo Civil, assinale a alternativa correta.",
+      alternativas: {
+        A: "É defeso ao autor intentar novamente a ação que, a requerimento do réu, foi extinta sem resolução do mérito por abandono da causa por mais de trinta dias, se não pagar ou depositar em cartório as despesas e honorários a que foi condenado.",
+        B: "O prazo para interposição de recurso será contato da data em que os advogados são intimados da decisão, da sentença ou do acórdão, sendo vedada a intimação em audiência, ainda que nessa seja publicada a sentença ou a decisão.",
+        C: "A arguição de incompetência absoluta de juízo deverá ser alegada pela parte em preliminar de contestação ou por meio de exceção no prazo de resposta do réu, sob pena de prorrogação de competência. Em sendo aquela declarada, somente os atos decisórios serão nulos.",
+        D: "Aquele que detenha a coisa em nome alheio, demandado em nome próprio, deverá nomear à autoria o proprietário ou possuidor. Instado a se manifestar, caso o autor se mantenha inerte, findo o prazo legal, presume-se que a nomeação à autoria não foi aceita."
+      },
+      gabarito: "A",
+      anulada: false
+    },
+    // ──────────────────────────────────────────────
+    // EXAME DE ORDEM UNIFICADO 2010.2
+    // ──────────────────────────────────────────────
+    {
+      numero: 227,
+      enunciado: "O Congresso Nacional e suas respectivas Casas se reúnem anualmente para a atividade legislativa. Com relação ao sistema constitucional brasileiro, assinale a alternativa correta.",
+      alternativas: {
+        A: "Legislatura: o período compreendido entre 2 de fevereiro a 17 de julho e 1º de agosto a 22 de dezembro.",
+        B: "Sessão legislativa: os quatro anos equivalentes ao mandato dos parlamentares.",
+        C: "Sessão conjunta: a reunião da Câmara dos Deputados e do Senado Federal destinada, por exemplo, a conhecer do veto presidencial e sobre ele deliberar.",
+        D: "Sessão extraordinária: a que ocorre por convocação ou do Presidente do Senado Federal ou do Presidente da Câmara dos Deputados ou do Presidente da República e mesmo por requerimento da maioria dos membros de ambas as Casas para, excepcionalmente, inaugurar a sessão legislativa e eleger as respectivas mesas diretoras."
+      },
+      gabarito: "C",
+      anulada: false
+    },
+    {
+      numero: 228,
+      enunciado: "A obrigatoriedade ou necessidade de deliberação plenária dos tribunais, no sistema de controle de constitucionalidade brasileiro, significa que:",
+      alternativas: {
+        A: "somente pelo voto da maioria absoluta de seus membros ou dos membros do respectivo órgão especial poderão os tribunais declarar a inconstitucionalidade de lei ou ato normativo do Poder Público.",
+        B: "a parte legitimamente interessada pode recorrer ao respectivo Tribunal Pleno das decisões dos órgãos fracionários dos Tribunais Federais ou Estaduais que, em decisão definitiva, tenha declarado a inconstitucionalidade de lei ou ato normativo.",
+        C: "somente nas sessões plenárias de julgamento dos Tribunais Superiores é que a matéria relativa a eventual inconstitucionalidade da lei ou ato normativo pode ser decidida.",
+        D: "a competência do Supremo Tribunal Federal para processar e julgar toda e qualquer ação que pretenda invalidar lei ou ato normativo do Poder Público pode ser delegada a qualquer tribunal, condicionada a delegação a que a decisão seja proferida por este órgão jurisdicional delegado em sessão plenária."
+      },
+      gabarito: "A",
+      anulada: false
+    },
+    {
+      numero: 229,
+      enunciado: "A respeito do Conselho Nacional de Justiça é correto afirmar que:",
+      alternativas: {
+        A: "é órgão integrante do Poder Judiciário com competência administrativa e jurisdicional.",
+        B: "pode rever, de ofício ou mediante provocação, os processos disciplinares de juízes e membros de Tribunais julgados há menos de um ano.",
+        C: "seus atos sujeitam-se ao controle do Supremo Tribunal Federal e do Superior Tribunal de Justiça.",
+        D: "a presidência é exercida pelo Ministro do Supremo Tribunal Federal que o integra e que exerce o direito de voto em todas as deliberações submetidas àquele órgão."
+      },
+      gabarito: "B",
+      anulada: false
+    },
+    {
+      numero: 230,
+      enunciado: "Em relação aos Ministros de Estado, a Constituição do Brasil estabelece que:",
+      alternativas: {
+        A: "como delegatários do Presidente da República, podem, desde que autorizados, extinguir cargos públicos.",
+        B: "podem expedir instruções para a execução de leis e editarem medidas provisórias.",
+        C: "somente os brasileiros natos poderão exercer a função.",
+        D: "respondem, qualquer que seja a infração cometida, perante o Superior Tribunal de Justiça."
+      },
+      gabarito: "A",
+      anulada: false
+    },
+    {
+      numero: 231,
+      enunciado: "Considerando que nos termos dispostos no art. 133 da Constituição do Brasil, o advogado é indispensável à administração da justiça, sendo até mesmo inviolável por seus atos e manifestações no exercício da profissão, é correto afirmar que:",
+      alternativas: {
+        A: "a imunidade profissional não pode sofrer restrições de qualquer natureza.",
+        B: "nenhuma demanda judicial, qualquer que seja o órgão do Poder Judiciário pelo qual tramite, independentemente de sua natureza, objeto e partes envolvidas, pode receber a prestação jurisdicional se não houver atuação de advogado.",
+        C: "a inviolabilidade do escritório ou local de trabalho é assegurada nos termos da lei, não sendo vedadas, contudo, a busca e a apreensão judicialmente decretadas, por decisão motivada, desde que realizada na presença de representante da OAB, salvo se esta, devidamente notificada ou solicitada, não proceder à indicação.",
+        D: "a prisão do advogado, por motivo de exercício da profissão, somente poderá ocorrer em flagrante, mesmo em caso de crime afiançável."
+      },
+      gabarito: "C",
+      anulada: false
+    },
+    {
+      numero: 232,
+      enunciado: "Sabe-se a polêmica ainda existente na doutrina constitucionalista pátria no que se refere à eventual hierarquia da Lei Complementar sobre a Lei Ordinária. Todavia, há diferenças entre essas duas espécies normativas que podem até gerar vícios de inconstitucionalidade caso não respeitadas durante o processo legislativo. A partir do fragmento acima, assinale a afirmativa incorreta.",
+      alternativas: {
+        A: "A Lei Complementar exige aprovação por maioria absoluta, enquanto a lei ordinária é aprovada por maioria simples dos membros presentes à sessão, desde que presente a maioria absoluta dos membros de cada Casa ou de suas Comissões.",
+        B: "As matérias que devem ser regradas por Lei Complementar encontram-se taxativamente indicadas no texto constitucional e, desde que não seja assunto específico de normatização por decreto legislativo ou resolução, o regramento de todo o resíduo competirá à lei ordinária.",
+        C: "As matérias reservadas à Lei Complementar não serão objeto de delegação do Congresso ao Presidente da República.",
+        D: "A discussão e votação dos projetos de lei ordinária devem, obrigatoriamente, ter início na Câmara dos Deputados."
+      },
+      gabarito: "D",
+      anulada: false
+    },
+    {
+      numero: 233,
+      enunciado: "Em relação à inovação da ordem constitucional que instituiu a nominada Súmula Vinculante, é correto afirmar que:",
+      alternativas: {
+        A: "somente os Tribunais Superiores podem editá-la.",
+        B: "podem ser canceladas, mas vedada a mera revisão.",
+        C: "a proposta para edição da Súmula pode ser provocada pelos legitimados para a propositura da ação direta de inconstitucionalidade.",
+        D: "desde que haja reiteradas decisões sobre matéria constitucional, o Supremo Tribunal Federal poderá, de ofício ou por provocação, aprovar a Súmula mediante decisão da maioria absoluta de seus membros."
+      },
+      gabarito: "C",
+      anulada: false
+    },
+    {
+      numero: 234,
+      enunciado: "Um determinado Estado-membro editou lei estabelecendo disciplina uniforme para a data de vencimento das mensalidades das instituições de ensino sediadas no seu território. Examinada a questão à luz da partilha de competência entre os entes federativos, é correto afirmar que:",
+      alternativas: {
+        A: "mensalidade escolar versa sobre direito obrigacional, portanto, de natureza contratual, logo cabe à União legislar sobre o assunto.",
+        B: "a matéria legislada tem por objeto prestação de serviço educacional, devendo ser considerada como de interesse típico municipal.",
+        C: "por versar o conteúdo da lei sobre educação, a competência do Estado-membro é concorrente com a da União.",
+        D: "somente competirá aos Estados-membros legislar sobre o assunto quando se tratar de mensalidades cobradas por instituições particulares de Ensino Médio."
+      },
+      gabarito: "A",
+      anulada: false
+    },
+    {
+      numero: 235,
+      enunciado: "Sobre o instrumento jurídico denominado Medida Provisória que não é lei, mas tem força de lei, assinale a afirmativa correta.",
+      alternativas: {
+        A: "A sua eficácia dura sessenta dias contados da publicação, podendo a medida ser prorrogada apenas duas vezes, ambas por igual período.",
+        B: "Se a Medida Provisória perder eficácia por decurso de prazo ou, em caráter expresso, for rejeitada pelo Congresso Nacional, vedada será sua reedição na mesma sessão legislativa.",
+        C: "A não apreciação pela Câmara dos Deputados e, após, pelo Senado Federal, no prazo de 45 dias contados da publicação, tem como consequência apenas o sobrestamento da deliberação dos projetos de emenda à Constituição.",
+        D: "A edição de Medida Provisória torna prejudicado o projeto de lei que disciplina o mesmo assunto e que, a par de já aprovado pelo Congresso Nacional, está pendente de sanção ou veto do Presidente da República."
+      },
+      gabarito: "B",
+      anulada: false
+    },
+    {
+      numero: 236,
+      enunciado: "Declarando o Supremo Tribunal Federal, incidentalmente, a inconstitucionalidade de lei ou ato normativo federal em face da Constituição do Brasil, caberá",
+      alternativas: {
+        A: "ao Procurador-Geral da República, como chefe do Ministério Público da União, expedir atos para o cumprimento da decisão pelos membros do Ministério Público Federal e dos Estados.",
+        B: "ao Presidente da República editar decreto para tornar inválida a lei no âmbito da administração pública.",
+        C: "ao Senado Federal suspender a execução da lei, total ou parcialmente, conforme o caso, desde que a decisão do Supremo Tribunal Federal seja definitiva.",
+        D: "ao Advogado-Geral da União interpor o recurso cabível para impedir que a União seja compelida a cumprir a referida decisão."
+      },
+      gabarito: "C",
+      anulada: false
+    },
+    {
+      numero: 237,
+      enunciado: "A doutrina costuma afirmar que certas prerrogativas postas à Administração encerram verdadeiros poderes, que são irrenunciáveis e devem ser exercidos sempre que o interesse público clamar. Por tal razão são chamados poder-dever. A esse respeito é correto afirmar que:",
+      alternativas: {
+        A: "o poder regulamentar é amplo, e permite, sem controvérsias, a edição de regulamentos autônomos e executórios.",
+        B: "o poder disciplinar importa à administração o dever de apurar infrações e aplicar penalidades, mesmo não havendo legislação prévia.",
+        C: "o poder de polícia se coloca discricionário, conferindo ao administrador ilimitada margem de opções quanto à sanção a ser, eventualmente, aplicada.",
+        D: "o poder hierárquico é inerente à ideia de verticalização administrativa, e revela as possibilidades de controlar atividades, delegar competência, avocar competências delegáveis e invalidar atos, dentre outros."
+      },
+      gabarito: "D",
+      anulada: false
+    },
+    {
+      numero: 238,
+      enunciado: "Em determinado procedimento administrativo disciplinar, a Administração federal impôs, ao servidor, a pena de advertência, tendo em vista a comprovação de ato de improbidade. Inconformado, o servidor recorre, vindo a Administração, após lhe conferir o direito de manifestação, a lhe impor a pena de demissão, nos termos da Lei nº 8112/90 e da Lei 9784/98. Com base no fragmento acima, é correto afirmar que a Administração Federal",
+      alternativas: {
+        A: "agiu em desrespeito aos princípios da eficiência e da instrumentalidade, autorizativos da reforma em prejuízo do recorrente, desde que não imponha pena grave.",
+        B: "agiu em respeito aos princípios da legalidade e autotutela, autorizativos da reforma em prejuízo do recorrente.",
+        C: "não observou o princípio da dignidade da pessoa humana, trazendo equivocada reforma em prejuízo do recorrente.",
+        D: "não observou o princípio do devido processo legal, trazendo equivocada reforma em prejuízo do recorrente."
+      },
+      gabarito: "B",
+      anulada: false
+    },
+    {
+      numero: 239,
+      enunciado: "Acerca do tombamento, como uma das formas de o Estado intervir na propriedade privada, os proprietários passam a ter obrigações negativas que estão relacionadas nas alternativas a seguir, à exceção de uma. Assinale-a.",
+      alternativas: {
+        A: "Os proprietários são obrigados a colocar os seus imóveis tombados à disposição da Administração Pública para que possam ser utilizados como repartições públicas, quando da necessidade imperiosa de utilização, a fim de suprir a prestação de serviços pelo Estado de forma eficiente.",
+        B: "Os proprietários são obrigados a suportar a fiscalização dos órgãos administrativos competentes.",
+        C: "Os proprietários não podem destruir, demolir ou mutilar o bem imóvel e somente poderão restaurá-lo, repará-lo ou pintá-lo após a obtenção de autorização especial do órgão administrativo competente.",
+        D: "Os proprietários não podem alienar os bens, ressalvada a possibilidade de transferência para uma entidade pública."
+      },
+      gabarito: "A",
+      anulada: false
+    },
+    {
+      numero: 240,
+      enunciado: "O poder de polícia, conferindo a possibilidade de o Estado limitar o exercício da liberdade ou das faculdades de proprietário, em prol do interesse público",
+      alternativas: {
+        A: "gera a possibilidade de cobrança, como contrapartida, de preço público.",
+        B: "se instrumentaliza sempre por meio de alvará de autorização.",
+        C: "afasta a razoabilidade, para atingir os seus objetivos maiores, em prol da predominância do interesse público.",
+        D: "deve ser exercido nos limites da lei, gerando a possibilidade de cobrança de taxa."
+      },
+      gabarito: "D",
+      anulada: false
+    },
+    {
+      numero: 241,
+      enunciado: "No Direito Público brasileiro, o grau de autonomia das Agências Reguladoras é definido por uma independência",
+      alternativas: {
+        A: "administrativa total e absoluta, uma vez que a Constituição da República de 1988 não lhes exige qualquer liame, submissão ou controle administrativo dos órgãos de cúpula do Poder Executivo.",
+        B: "administrativa mitigada, uma vez que a própria lei que cria cada uma das Agências Reguladoras define e regulamenta as relações de submissão e controle, fundado no poder de supervisão dos Ministérios a que cada uma se encontra vinculada, em razão da matéria, e na superintendência atribuída ao chefe do Poder Executivo, como chefe superior da Administração Pública.",
+        C: "legislativa total e absoluta, visto que gozam de poder normativo regulamentar, não se sujeitando assim às leis emanadas pelos respectivos Poderes legislativos de cada ente da federação brasileira.",
+        D: "política decisória, pois não estão obrigadas a seguir as decisões de políticas públicas adotadas pelos Poderes do Estado (executivo e legislativo)."
+      },
+      gabarito: "B",
+      anulada: false
+    },
+    {
+      numero: 242,
+      enunciado: "Nas hipóteses de desapropriação, em regra geral, os requisitos constitucionais a serem observados pela Administração Pública são os seguintes:",
+      alternativas: {
+        A: "comprovação da necessidade ou utilidade pública ou de interesse social; pagamento de indenização prévia ao ato de imissão na posse pelo Poder Público, e que seja justa e em dinheiro; e observância de ato administrativo, sem contraditório por parte do proprietário.",
+        B: "comprovação da necessidade ou utilidade pública ou de interesse social; pagamento de indenização prévia ao ato de imissão na posse pelo Poder Público, e que seja justa e em dinheiro; e observância de procedimento administrativo, com respeito ao contraditório e ampla defesa por parte do proprietário.",
+        C: "comprovação da necessidade ou utilidade pública ou de interesse social; pagamento de indenização prévia ao ato de imissão na posse pelo Poder Público, e que seja justa e em títulos da dívida pública ou quaisquer outros títulos públicos, negociáveis no mercado financeiro; e observância de procedimento administrativo, com respeito ao contraditório e ampla defesa por parte do proprietário.",
+        D: "comprovação da necessidade ou utilidade pública ou de interesse social; pagamento de indenização, posteriormente ao ato de imissão na posse pelo Poder Público, e que seja justa e em dinheiro; e observância de procedimento administrativo, com respeito ao contraditório e ampla defesa por parte do proprietário."
+      },
+      gabarito: "B",
+      anulada: false
+    },
+    {
+      numero: 243,
+      enunciado: "Uma das características dos contratos administrativos é a “instabilidade” quanto ao seu objeto que decorre",
+      alternativas: {
+        A: "do poder conferido à Administração Pública de alterar, unilateralmente, algumas cláusulas do contrato, no curso de sua execução, na forma do artigo 58, inciso I da Lei n. 8.666/93, a fim de adequar o objeto do contrato às finalidades de interesse público, respeitados os direitos do contratado.",
+        B: "da possibilidade do contratado (particular) alterar, unilateralmente, a qualquer tempo, algumas cláusulas do contrato, no curso de sua execução, de forma a atender aos seus próprios interesses em face das prerrogativas da Administração Pública.",
+        C: "do poder conferido à Administração Pública de alterar, unilateralmente, algumas cláusulas do contrato, no curso de sua execução, na forma do artigo 58, inciso I da Lei n. 8.666/93, a fim de adequar o objeto do contrato aos interesses do contratado (particular) em face das prerrogativas da Administração Pública.",
+        D: "de não haver qualquer possibilidade de alteração do objeto do contrato administrativo, quer pela Administração Pública, quer pelo contratado (particular), tendo em vista o princípio da vinculação ao edital licitatório, do qual o contrato e seu objeto fazem parte integrante; e o princípio da juridicidade, do qual aquele primeiro decorre."
+      },
+      gabarito: "A",
+      anulada: false
+    },
+    {
+      numero: 244,
+      enunciado: "Determinada Administração Pública realiza concurso para preenchimento de cargos de detetive, categoria I. Ao final do certame, procede à nomeação e posse de 400 (quatrocentos) aprovados. Os vinte primeiros classificados são desviados de suas funções e passam a exercer as atividades de delegado. Com o transcurso de 4 (quatro) anos, estes vinte agentes postulam a efetivação no cargo. A partir do fragmento acima, assinale a alternativa correta.",
+      alternativas: {
+        A: "Os referidos agentes têm razão, pois investidos irregularmente, estão exercendo as suas atividades há mais de 4 (quatro) anos, a consolidar a situação.",
+        B: "É inconstitucional toda modalidade de provimento que propicie ao servidor investir-se, sem prévia aprovação em concurso público destinado ao seu provimento, em cargo que não integra a carreira na qual anteriormente foi investido.",
+        C: "Não têm ainda o direito, pois dependem do transcurso do prazo de 15 (quinze) anos para que possam ser tidos como delegados, por usucapião.",
+        D: "É inconstitucional esta modalidade de provimento do cargo, pois afronta o princípio do concurso público, porém não podem ter alterado os ganhos vencimentais, sedimentado pelos anos, pelo princípio da irredutibilidade."
+      },
+      gabarito: "B",
+      anulada: false
+    },
+    {
+      numero: 245,
+      enunciado: "No âmbito do Poder discricionário da Administração Pública, não se admite que o agente público administrativo exerça o Poder discricionário",
+      alternativas: {
+        A: "quando estiver diante de conceitos legais e jurídicos parcialmente indeterminados, que se tornam determinados à luz do caso concreto e à luz das circunstâncias de fato.",
+        B: "quando estiver diante de conceitos legais e jurídicos técnico-científicos, sendo, neste caso, limitado às escolhas técnicas, por óbvio possíveis.",
+        C: "quando estiver diante de conceitos valorativos estabelecidos pela lei, que dependem de concretização pelas escolhas do agente, considerados o momento histórico e social.",
+        D: "em situações em que a redação da Lei se encontra insatisfatória ou ultrapassada."
+      },
+      gabarito: "D",
+      anulada: false
+    },
+    {
+      numero: 246,
+      enunciado: "Uma determinada empresa concessionária transfere o seu controle acionário para uma outra empresa privada, sem notificar, previamente, o Poder concedente, parte no contrato de concessão. Assinale a alternativa que indique a medida que o Poder concedente poderá tomar, se não restarem atendidas as mesmas exigências técnicas, de idoneidade financeira e regularidade jurídica por esta nova empresa.",
+      alternativas: {
+        A: "Poderá o Poder concedente declarar a caducidade da concessão, tendo em vista o caráter intuitu personae do contrato de concessão.",
+        B: "Poderá retomar o serviço, por motivo de interesse público, através da encampação, autorizada por lei específica, após prévio pagamento da indenização.",
+        C: "Poderá o Poder concedente anular o contrato de concessão, através de decisão administrativa, uma vez que a transferência acionária da empresa concessionária sem a notificação prévia ao Poder concedente gera irregularidade, insusceptível de convalidação.",
+        D: "Nada poderá fazer o Poder concedente, uma vez que a empresa concessionária, apesar da alteração societária, não desnatura o caráter intuitu personae do contrato de concessão."
+      },
+      gabarito: "A",
+      anulada: false
+    },
+    {
+      numero: 247,
+      enunciado: "A respeito das diferenças e semelhanças entre prescrição e decadência, no Código Civil, é correto afirmar que:",
+      alternativas: {
+        A: "a prescrição acarreta a extinção do direito potestativo, enquanto a decadência gera a extinção do direito subjetivo.",
+        B: "os prazos prescricionais podem ser suspensos e interrompidos, enquanto os prazos decadenciais legais não se suspendem ou interrompem, com exceção da hipótese de titular de direito absolutamente incapaz, contra o qual não corre nem prazo prescricional nem prazo decadencial.",
+        C: "não se pode renunciar à decadência legal nem à prescrição, mesmo após consumadas.",
+        D: "a prescrição é exceção que deve ser alegada pela parte a quem beneficia, enquanto a decadência pode ser declarada de ofício pelo juiz."
+      },
+      gabarito: "B",
+      anulada: false
+    },
+    {
+      numero: 248,
+      enunciado: "Com relação ao regime da solidariedade passiva, é correto afirmar que:",
+      alternativas: {
+        A: "cada herdeiro pode ser demandado pela dívida toda do devedor solidário falecido.",
+        B: "com a perda do objeto por culpa de um dos devedores solidários, a solidariedade subsiste no pagamento do equivalente pecuniário, mas pelas perdas e danos somente poderá ser demandado o culpado.",
+        C: "se houver atraso injustificado no cumprimento da obrigação por culpa de um dos devedores solidários, a solidariedade subsiste no pagamento do valor principal, mas pelos juros da mora somente poderá ser demandado o culpado.",
+        D: "as exceções podem ser aproveitadas por qualquer dos devedores solidários, ainda que sejam pessoais apenas a um deles."
+      },
+      gabarito: "B",
+      anulada: false
+    },
+    {
+      numero: 249,
+      enunciado: "Durante dez anos, empregados de uma fabricante de extrato de tomate distribuíram, gratuitamente, sementes de tomate entre agricultores de uma certa região. A cada ano, os empregados da fabricante procuravam os agricultores, na época da colheita, para adquirir a safra produzida. No ano de 2009, a fabricante distribuiu as sementes, como sempre fazia, mas não retornou para adquirir a safra. Procurada pelos agricultores, a fabricante recusou-se a efetuar a compra. O tribunal competente entendeu que havia responsabilidade pré-contratual da fabricante. A responsabilidade pré-contratual é aquela que:",
+      alternativas: {
+        A: "deriva da violação à boa-fé objetiva na fase das negociações preliminares à formação do contrato.",
+        B: "deriva da ruptura de um pré-contrato, também chamado contrato preliminar.",
+        C: "surgiu, como instituto jurídico, em momento histórico anterior à responsabilidade contratual.",
+        D: "segue o destino da responsabilidade contratual, como o acessório segue o principal."
+      },
+      gabarito: "A",
+      anulada: false
+    },
+    {
+      numero: 250,
+      enunciado: "Em 2004, Joaquim, que não tinha herdeiros necessários, lavrou um testamento contemplando como sua herdeira universal Ana. Em 2006, arrependido, Joaquim revogou o testamento de 2004, nomeando como seu herdeiro universal Sérgio. Em 2008, Sérgio faleceu, deixando uma filha Catarina. No mês de julho de 2010, faleceu Joaquim. O único parente vivo de Joaquim era seu irmão, Rubens. Assinale a alternativa que indique a quem caberá a herança de Joaquim.",
+      alternativas: {
+        A: "Rubens.",
+        B: "Catarina.",
+        C: "Ana.",
+        D: "A herança será vacante."
+      },
+      gabarito: "A",
+      anulada: false
+    },
+    {
+      numero: 251,
+      enunciado: "Sobre o constituto possessório, assinale a alternativa correta.",
+      alternativas: {
+        A: "Trata-se de modo originário de aquisição da propriedade.",
+        B: "Trata-se de modo originário de aquisição da posse.",
+        C: "Representa uma tradição ficta.",
+        D: "É imprescindível para que se opere a transferência da posse aos herdeiros na sucessão universal."
+      },
+      gabarito: "C",
+      anulada: false
+    },
+    {
+      numero: 252,
+      enunciado: "Passando por dificuldades financeiras, Alexandre instituiu uma hipoteca sobre imóvel de sua propriedade, onde reside com sua família. Posteriormente, foi procurado por Amanda, que estaria disposta a adquirir o referido imóvel por um valor bem acima do mercado. Consultando seu advogado, Alexandre ouviu dele que não poderia alienar o imóvel, já que havia uma cláusula na escritura de instituição da hipoteca que o proibia de alienar o bem hipotecado. A opinião do advogado de Alexandre",
+      alternativas: {
+        A: "está incorreta, porque a hipoteca instituída não produz efeitos, pois, na hipótese, o direito real em garantia a ser instituído deveria ser o penhor.",
+        B: "está incorreta, porque Alexandre está livre para alienar o imóvel, pois a cláusula que proíbe o proprietário de alienar o bem hipotecado é nula.",
+        C: "está incorreta, uma vez que a hipoteca é nula, pois não é possível instituir hipoteca sobre bem de família do devedor hipotecário.",
+        D: "está correta, porque em virtude da proibição contratual, Alexandre não poderia alienar o imóvel enquanto recaísse sobre ele a garantia hipotecária."
+      },
+      gabarito: "B",
+      anulada: false
+    },
+    {
+      numero: 253,
+      enunciado: "Jane e Carlos constituíram uma união estável em julho de 2003 e não celebraram contrato para regular as relações patrimoniais decorrentes da aludida entidade familiar. Em março de 2005, Jane recebeu R$ 100.000,00 (cem mil reais) a título de doação de seu tio Túlio. Com os R$ 100.000,00 (cem mil reais), Jane adquiriu em maio de 2005 um imóvel na Barra da Tijuca. Em 2010, Jane e Carlos se separaram. Carlos procura um advogado, indagando se tem direito a partilhar o imóvel adquirido por Jane na Barra da Tijuca em maio de 2005. Assinale a alternativa que indique a orientação correta a ser exposta a Carlos.",
+      alternativas: {
+        A: "Por se tratar de bem adquirido a título oneroso na vigência da união estável, Carlos tem direito a partilhar o imóvel adquirido por Jane na Barra da Tijuca em maio de 2005.",
+        B: "Carlos não tem direito a partilhar o imóvel adquirido por Jane na Barra da Tijuca em maio de 2005 porque, salvo contrato escrito entre os companheiros, aplica-se às relações patrimoniais entre os mesmos o regime da separação total de bens.",
+        C: "Carlos não tem direito a partilhar o imóvel adquirido por Jane na Barra da Tijuca em maio de 2005 porque, em virtude da ausência de contrato escrito entre os companheiros, aplica-se às relações patrimoniais entre os mesmos o regime da comunhão parcial de bens, que exclui dos bens comuns entre os consortes aqueles doados e os sub-rogados em seu lugar.",
+        D: "Carlos tem direito a partilhar o imóvel adquirido por Jane na Barra da Tijuca em maio de 2005 porque, muito embora o referido bem tenha sido adquirido com o produto de uma doação, não se aplica a sub-rogação de bens na união estável."
+      },
+      gabarito: "C",
+      anulada: false
+    },
+    {
+      numero: 254,
+      enunciado: "Por meio de uma promessa de compra e venda, celebrada por instrumento particular registrada no cartório de Registro de Imóveis e na qual não se pactuou arrependimento, Juvenal foi residir no imóvel objeto do contrato e, quando quitou o pagamento, deparou-se com a recusa do promitente-vendedor em outorgar-lhe a escritura definitiva do imóvel. Diante do impasse, Juvenal poderá",
+      alternativas: {
+        A: "requerer ao juiz a adjudicação do imóvel, a despeito de a promessa de compra e venda ter sido celebrada por instrumento particular.",
+        B: "usucapir o imóvel, já que não faria jus à adjudicação compulsória na hipótese.",
+        C: "desistir do negócio e pedir o dinheiro de volta.",
+        D: "exigir a substituição do imóvel prometido à venda por outro, muito embora inexistisse previsão expressa a esse respeito no contrato preliminar."
+      },
+      gabarito: "A",
+      anulada: false
+    },
+    {
+      numero: 255,
+      enunciado: "João prometeu transferir a propriedade de uma coisa certa, mas antes disso, sem culpa sua, o bem foi deteriorado. Segundo o Código Civil, ao caso de João aplica-se o seguinte regime jurídico:",
+      alternativas: {
+        A: "a obrigação fica resolvida, com a devolução de valores eventualmente pagos.",
+        B: "a obrigação subsiste, com a entrega da coisa no estado em que se encontra.",
+        C: "a obrigação subsiste, com a entrega da coisa no estado em que se encontra e abatimento no preço proporcional à deterioração.",
+        D: "a obrigação poderá ser resolvida, com a devolução de valores eventualmente pagos, ou subsistir, com a entrega da coisa no estado em que se encontra e abatimento no preço proporcional à deterioração, cabendo ao credor a escolha de uma dentre as duas soluções."
+      },
+      gabarito: "D",
+      anulada: false
+    },
+    {
+      numero: 256,
+      enunciado: "Assinale a alternativa que contemple exclusivamente obrigação propter rem:",
+      alternativas: {
+        A: "a obrigação de indenizar decorrente da aluvião e aquela decorrente da avulsão.",
+        B: "a hipoteca e o dever de pagar as cotas condominiais.",
+        C: "o dever que tem o servidor da posse de exercer o desforço possessório e o dever de pagar as cotas condominiais.",
+        D: "a obrigação que tem o proprietário de um terreno de indenizar o terceiro que, de boa-fé, erigiu benfeitorias sobre o mesmo."
+      },
+      gabarito: "D",
+      anulada: false
+    },
+    {
+      numero: 257,
+      enunciado: "A capacidade é um dos pressupostos processuais. Caso o juiz verifique que uma das partes é incapaz ou há irregularidade em sua representação, deverá suspender o processo e marcar prazo razoável para que o defeito seja sanado. Assinale a alternativa que indique a providência correta a ser tomada pelo magistrado, na hipótese de persistência do vício.",
+      alternativas: {
+        A: "Se o vício se referir ao autor, deve o juiz aplicar-lhe multa por litigância de má-fé.",
+        B: "Se o vício se referir ao autor, deve o juiz proferir o julgamento antecipado da lide.",
+        C: "Se o vício se referir ao réu, deve o juiz reputá-lo revel.",
+        D: "Se o vício se referir ao réu, deve o juiz julgar a causa em seu desfavor."
+      },
+      gabarito: "C",
+      anulada: false
+    },
+    {
+      numero: 258,
+      enunciado: "A incompetência do juízo, tal como prevista no CPC, pode assumir duas feições, de acordo com a natureza do vício e ainda com as consequências advindas de tal reconhecimento. O Código trata, então, da incompetência absoluta e da relativa. A respeito dessas modalidades de incompetência, assinale a afirmativa correta.",
+      alternativas: {
+        A: "A incompetência relativa pode ser alegada a qualquer tempo.",
+        B: "A incompetência relativa sempre pode ser conhecida de ofício pelo juiz.",
+        C: "A incompetência absoluta gera a nulidade de todos os atos praticados no processo até seu reconhecimento.",
+        D: "A incompetência absoluta é alegada como preliminar da contestação ou por petição nos autos."
+      },
+      gabarito: "D",
+      anulada: false
+    },
+    {
+      numero: 259,
+      enunciado: "Com relação ao procedimento da execução por quantia certa, contra devedor solvente, fundado em título extrajudicial, é correto afirmar que:",
+      alternativas: {
+        A: "o executado é citado para, no prazo de três dias, apresentar embargos.",
+        B: "o credor só pode indicar os bens a serem penhorados se o executado não se manifestar no prazo legal, após ser citado.",
+        C: "o juiz pode, de ofício, e a qualquer tempo, determinar a intimação do executado para indicar bens passíveis de penhora.",
+        D: "o juiz somente fixará os honorários de advogado a serem pagos pelo executado ao fim do processo de execução."
+      },
+      gabarito: "C",
+      anulada: false
+    },
+    {
+      numero: 260,
+      enunciado: "As medidas cautelares estão expressamente previstas no CPC como forma de instrumentalizar a tutela, tendo natureza eminentemente acessória. Assinale a alternativa que apresente uma regra que disciplina a concessão de medidas cautelares.",
+      alternativas: {
+        A: "o Juiz, como regra, deve deferir medidas cautelares sem a prévia audiência do requerido.",
+        B: "o direito brasileiro admite apenas medidas cautelares incidentais, sendo vedado o uso de medidas prévias.",
+        C: "interposto recurso nos autos principais, fica vedado o requerimento de cautelares.",
+        D: "salvo decisão em contrário, a cautelar conserva sua eficácia mesmo durante o período de suspensão do processo principal."
+      },
+      gabarito: "D",
+      anulada: false
+    },
+    {
+      numero: 261,
+      enunciado: "A Lei n. 9.099/95 disciplina os chamados Juizados Especiais Cíveis no âmbito Estadual. Nela é possível encontrar diversas regras especiais, que diferenciam o procedimento dos Juizados do procedimento comum do CPC. Segundo a Lei n. 9.099/95, assinale a alternativa que indique uma dessas regras específicas.",
+      alternativas: {
+        A: "Não é cabível nenhuma forma de intervenção de terceiros nem de assistência.",
+        B: "É vedado o litisconsórcio.",
+        C: "Nas ações propostas por microempresas, admite-se a reconvenção.",
+        D: "Se o pedido formulado for genérico, admite-se, excepcionalmente, sentença ilíquida."
+      },
+      gabarito: "A",
+      anulada: false
+    },
+    {
+      numero: 262,
+      enunciado: "O Mandado de Segurança Coletivo, previsto no art. 5º, inciso LXX da Constituição da República, foi regulamentado pelos artigos 21 e 22 da Lei Federal n. 12.016/09. Acerca desta garantia constitucional é correto afirmar que:",
+      alternativas: {
+        A: "qualquer cidadão tem legitimidade para impetrar o mandado de segurança coletivo.",
+        B: "no mandado de segurança coletivo, a sentença fará coisa julgada limitadamente aos membros do grupo substituído pelo impetrante.",
+        C: "o mandado de segurança coletivo pode ser utilizado na defesa de direitos difusos.",
+        D: "o mandado de segurança coletivo induz litispendência para as ações individuais que tenham o mesmo objeto."
+      },
+      gabarito: "B",
+      anulada: false
+    },
+    {
+      numero: 263,
+      enunciado: "Acerca da revelia, é correto afirmar que:",
+      alternativas: {
+        A: "a revelia se dá com a não apresentação de exceção ou de reconvenção no prazo da resposta.",
+        B: "ainda que o litígio verse sobre direitos indisponíveis, a revelia produz seus efeitos normalmente.",
+        C: "contra o revel, ainda que tenha patrono constituído nos autos, correrão os prazos independentemente de intimação.",
+        D: "o revel pode intervir no processo em qualquer fase, recebendo-o no estado em que se encontrar."
+      },
+      gabarito: "D",
+      anulada: false
+    },
+    {
+      numero: 264,
+      enunciado: "Se, durante a audiência de instrução e julgamento, um advogado, exercendo seu mister de bem defender os interesses de seu cliente, entende que a testemunha arrolada pela parte contrária mantém com essa vínculo estreito de amizade e que seu depoimento pode ser tendencioso, esse advogado deverá:",
+      alternativas: {
+        A: "contraditar a testemunha, devendo a audiência, nesse caso, ser necessária e imediatamente interrompida.",
+        B: "contraditar a testemunha, que mesmo assim poderá ser ouvida como informante do juízo, desde que o magistrado fundamente sua decisão de ouví-la.",
+        C: "contraditar a testemunha, hipótese em que estará o juiz obrigado a dispensá-la.",
+        D: "contraditar a testemunha, que será ouvida após a audiência, sem a presença das partes."
+      },
+      gabarito: "B",
+      anulada: false
+    },
+    {
+      numero: 265,
+      enunciado: "Com relação ao procedimento da curatela dos interditos, é correto afirmar que:",
+      alternativas: {
+        A: "na ausência dos pais, do tutor e do cônjuge, um parente próximo pode requerer a interdição.",
+        B: "a sentença proferida pelo juiz faz coisa julgada material.",
+        C: "a realização de prova pericial, consistente no exame do interditando, é facultativa, podendo o juiz dispensá-la.",
+        D: "o Ministério Público não tem legitimidade para requerer a interdição."
+      },
+      gabarito: "A",
+      anulada: false
+    },
+    {
+      numero: 266,
+      enunciado: "Um advogado é procurado em seu escritório por um cliente que lhe narra que a empresa da qual ele é diretor foi citada pelo poder judiciário, em decorrência de um conflito surgido em razão de contrato de compra e venda no qual inseriram cláusula compromissória cheia, estabelecendo que em caso de eventual conflito entre as partes, o mesmo será apreciado por um tribunal arbitral. O advogado ao peticionar no referido processo, representando os interesses do seu cliente, no sentido de exigir cumprimento da cláusula compromissória cheia, deverá:",
+      alternativas: {
+        A: "requerer a designação de audiência de conciliação, pois o juiz pode conhecer de ofício da pré-existência da convenção de arbitragem.",
+        B: "apresentar desde logo contestação, restringindo sua argumentação ao exame do mérito da causa.",
+        C: "apresentar contestação e alegar expressamente, em preliminar, a existência de convenção de arbitragem, solicitando a extinção do feito.",
+        D: "solicitar ao juiz o julgamento antecipado da lide."
+      },
+      gabarito: "C",
+      anulada: false
+    },
+    {
+      numero: 267,
+      enunciado: "A respeito do regime de compensação de jornada do banco de horas, assinale a alternativa correta.",
+      alternativas: {
+        A: "Pode ser instituído mediante acordo, verbal ou por escrito, entre empresa e empregado, facultando-se a participação dos sindicatos representantes das categorias.",
+        B: "Não admite compensação de jornada que ultrapassar o limite máximo de 10 horas diárias.",
+        C: "Pode ser compensado após a rescisão do contrato de trabalho, se houver crédito em favor do trabalhador, respeitado o limite de validade do acordo.",
+        D: "O excesso de jornada a ser compensada não pode exceder, no prazo legal máximo de um semestre, a soma das jornadas semanais previstas para o período."
+      },
+      gabarito: "B",
+      anulada: false
+    },
+    {
+      numero: 268,
+      enunciado: "No contexto da teoria das nulidades do contrato de trabalho, assinale a alternativa correta.",
+      alternativas: {
+        A: "Configurado o trabalho ilícito, é devido ao empregado somente o pagamento da contraprestação salarial pactuada.",
+        B: "Os trabalhos noturno, perigoso e insalubre do menor de 18 (dezoito) anos de idade são modalidades de trabalho proibido ou irregular.",
+        C: "O trabalho do menor de 16 (dezesseis) anos de idade, que não seja aprendiz, é modalidade de trabalho ilícito, não gerando qualquer efeito.",
+        D: "A falta de anotação da Carteira de Trabalho e Previdência Social do empregado invalida o contrato de trabalho."
+      },
+      gabarito: "B",
+      anulada: false
+    },
+    {
+      numero: 269,
+      enunciado: "Com relação ao Direito Coletivo do Trabalho, assinale a alternativa correta.",
+      alternativas: {
+        A: "Acordo coletivo do trabalho é o acordo de caráter normativo pelo qual dois ou mais sindicatos representativos de categorias econômicas e profissionais estipulam condições de trabalho aplicáveis, no âmbito das respectivas representações, às relações individuais de trabalho.",
+        B: "Na greve em serviços ou atividades essenciais, ficam as entidades sindicais ou os trabalhadores, conforme o caso, obrigados a comunicar a decisão aos empregadores e aos usuários com antecedência mínima de 72 (setenta e duas) horas da paralisação.",
+        C: "As centrais sindicais, por força de lei, podem celebrar acordos e convenções coletivos de trabalho.",
+        D: "O recolhimento da contribuição sindical obrigatória (“imposto sindical”) somente é exigido dos empregados sindicalizados, em face do princípio da liberdade sindical."
+      },
+      gabarito: "B",
+      anulada: false
+    },
+    {
+      numero: 270,
+      enunciado: "O empregado João foi contratado para trabalhar como caixa de um supermercado. No ato de admissão, foi-lhe entregue o regulamento da empresa, onde constava a obrigatoriedade do uso do uniforme para o exercício do trabalho. Entretanto, cerca de cinco meses após a contratação, João compareceu para trabalhar sem o uniforme e, por isso, foi advertido. Um mês depois, o fato se repetiu e João foi suspenso por 3 dias. Passados mais 2 meses, João compareceu novamente sem uniforme, tendo sido suspenso por 30 dias. Ao retornar da suspensão foi encaminhado ao departamento de pessoal, onde tomou ciência da sua dispensa por justa causa (indisciplina – art. 482, h da CLT). Diante deste caso concreto",
+      alternativas: {
+        A: "está correta a aplicação da justa causa, uma vez que João descumpriu reiteradamente as ordens genéricas do empregador contidas no regulamento geral.",
+        B: "está incorreta a aplicação da justa causa, uma vez que João cometeu ato de insubordinação e não de indisciplina.",
+        C: "está incorreta a aplicação da justa causa, uma vez que João cometeu mau procedimento.",
+        D: "está incorreta a aplicação da justa causa, uma vez que o empregador praticou bis in idem, ao punir João duas vezes pelo mesmo fato."
+      },
+      gabarito: "D",
+      anulada: false
+    },
+    {
+      numero: 271,
+      enunciado: "Com relação ao regime de férias, é correto afirmar que:",
+      alternativas: {
+        A: "as férias devem ser pagas ao empregado com adicional de 1/3 até 30 dias antes do início do seu gozo.",
+        B: "salvo para as gestantes e os menores de 18 anos, as férias podem ser gozadas em dois períodos.",
+        C: "o empregado que pede demissão antes de completado seu primeiro período aquisitivo faz jus a férias proporcionais.",
+        D: "as férias podem ser convertidas integralmente em abono pecuniário, por opção do empregado."
+      },
+      gabarito: "C",
+      anulada: false
+    },
+    {
+      numero: 272,
+      enunciado: "Marcos foi contratado para o cargo de escriturário de um banco privado. Iniciada sua atividade, Marcos percebeu que o gerente lhe estava repassando tarefas alheias à sua função. A rigor, conforme constava do quadro de carreira da empresa devidamente registrado no Ministério do Trabalho e Emprego, as atribuições que lhe estavam sendo exigidas deveriam ser destinadas ao cargo de tesoureiro, cujo nível e cuja remuneração eram bem superiores. Esta situação perdurou por dois anos, ao fim dos quais Marcos decidiu ajuizar uma ação trabalhista em face do seu empregador. Nela, postulou uma obrigação de fazer – o seu reenquadramento para a função de tesoureiro – e o pagamento das diferenças salariais do período. Diante desta situação jurídica, é correto afirmar que:",
+      alternativas: {
+        A: "o pedido está inepto, uma vez que este é um caso típico de equiparação salarial e não houve indicação de paradigma.",
+        B: "o pedido deve ser julgado improcedente, uma vez que a determinação das atividades, para as quais o empregado está obrigado, encontra-se dentro do jus variandi do empregador.",
+        C: "o pedido deve ser julgado procedente, se for demonstrado, pelo empregado, que as suas atividades correspondiam, de fato, àquelas previstas abstratamente na norma interna da empresa para o cargo de tesoureiro.",
+        D: "o pedido deve ser julgado procedente em parte, uma vez que só a partir da decisão judicial que determine o reenquadramento é que o empregado fará jus ao aumento salarial."
+      },
+      gabarito: "C",
+      anulada: false
+    },
+    {
+      numero: 273,
+      enunciado: "Joana foi contratada para trabalhar de segunda a sábado na residência do Sr. Demétrius, de 70 anos, como sua acompanhante, recebendo salário mensal. Ao exato término do terceiro mês de prestação de serviços, o Sr. Demétrius descobre que a Sra. Joana está grávida, rescindindo a prestação de serviços. Joana, inconformada, ajuíza ação trabalhista para que lhe seja reconhecida a condição de empregada doméstica e garantido o seu emprego mediante reconhecimento da estabilidade provisória pela gestação. Levando-se em consideração a situação de Joana, assinale a alternativa correta.",
+      alternativas: {
+        A: "A função de acompanhante é incompatível com o reconhecimento de vínculo de emprego doméstico.",
+        B: "Joana faz jus ao reconhecimento de vínculo de emprego como empregada doméstica.",
+        C: "Joana não fará jus à estabilidade gestacional, pois este não é um direito garantido à categoria dos empregados domésticos.",
+        D: "Joana não fará jus à estabilidade gestacional, pois o contrato de três meses é automaticamente considerado de experiência para o Direito do Trabalho e pode ser rescindido ao atingir o seu termo final."
+      },
+      gabarito: "B",
+      anulada: false
     }
   ]
 };
@@ -1970,13 +3563,6 @@ export default function SimuladoPage() {
                       <RotateCcw className="w-5 h-5" />
                       REFAZER SIMULADO
                     </button>
-                    <Link
-                      to="/"
-                      className="flex items-center justify-center gap-2 bg-bg shadow-neumorphic-sm border border-white/60 px-8 py-4 rounded-2xl font-inter font-bold hover:-translate-y-1 transition-all"
-                    >
-                      <ArrowLeft className="w-5 h-5" />
-                      VOLTAR AO INÍCIO
-                    </Link>
                   </div>
                 </div>
               </div>
