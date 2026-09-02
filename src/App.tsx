@@ -7,14 +7,16 @@ import {
 
 // 1. CONFIGURAÇÃO DE CHECKOUT E UTMs
 const CHECKOUT_URL_BASE = "https://pay.hotmart.com/X107415504B?bid=1788286126811";
+const CHECKOUT_URL_19_BASE = "https://pay.hotmart.com/X107415504B?bid=1788286126811";
+const CHECKOUT_URL_29_BASE = "https://pay.hotmart.com/E107441550M?bid=1788380339647";
 
-const useCheckoutUrl = () => {
-  const [finalUrl, setFinalUrl] = useState(CHECKOUT_URL_BASE);
+const useCheckoutUrl = (baseUrl: string = CHECKOUT_URL_19_BASE) => {
+  const [finalUrl, setFinalUrl] = useState(baseUrl);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
       try {
-        const urlObj = new URL(CHECKOUT_URL_BASE);
+        const urlObj = new URL(baseUrl);
         const params = new URLSearchParams(window.location.search);
 
         // Preservar UTMs e parâmetros de rastreio
@@ -25,10 +27,10 @@ const useCheckoutUrl = () => {
 
         setFinalUrl(urlObj.toString());
       } catch (error) {
-        console.warn("Invalid CHECKOUT_URL_BASE. Using fallback.");
+        console.warn("Invalid checkout URL. Using fallback.");
       }
     }
-  }, []);
+  }, [baseUrl]);
 
   const handleTrack = () => {
     if (typeof window !== "undefined" && (window as any).fbq) {
@@ -102,21 +104,25 @@ export default function App() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [isUpsellOpen, setIsUpsellOpen] = useState(false);
   const carouselRef = useRef<HTMLDivElement>(null);
-  const { finalUrl, handleTrack } = useCheckoutUrl();
+  const { finalUrl: finalUrl19, handleTrack: handleTrack19 } = useCheckoutUrl(CHECKOUT_URL_19_BASE);
+  const { finalUrl: finalUrl29, handleTrack: handleTrack29 } = useCheckoutUrl(CHECKOUT_URL_29_BASE);
 
   const openUpsellModal = () => setIsUpsellOpen(true);
   const closeUpsellModal = () => setIsUpsellOpen(false);
 
   const handleAccept29 = () => {
     setIsUpsellOpen(false);
-    alert("Você selecionou o Pacote Completo (R$ 29,99)! O link de checkout será configurado em breve.");
+    handleTrack29();
+    setTimeout(() => {
+      window.location.href = finalUrl29;
+    }, 300);
   };
 
   const handleDecline19 = () => {
     setIsUpsellOpen(false);
-    handleTrack();
+    handleTrack19();
     setTimeout(() => {
-      window.location.href = finalUrl;
+      window.location.href = finalUrl19;
     }, 300);
   };
 
