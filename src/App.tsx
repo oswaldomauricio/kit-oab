@@ -54,20 +54,32 @@ const NeumorphicCard: React.FC<{ children: React.ReactNode; className?: string; 
   </div>
 );
 
-const CTAButton = ({ children, className = "", variant = "main" }: { children: React.ReactNode; className?: string; variant?: "main" | "header" | "mobile" }) => {
+const CTAButton = ({
+  children,
+  className = "",
+  variant = "main",
+  onClick
+}: {
+  children: React.ReactNode;
+  className?: string;
+  variant?: "main" | "header" | "mobile";
+  onClick?: (e: React.MouseEvent) => void;
+}) => {
   const { finalUrl, handleTrack } = useCheckoutUrl();
 
   const styles = {
-    main: "bg-primary hover:bg-primary-vibrant text-white px-8 md:px-12 py-4 md:py-5 rounded-2xl text-lg md:text-xl font-black shadow-btn w-full md:w-fit text-center",
-    header: "bg-primary hover:bg-primary-vibrant text-white px-4 py-2 md:px-6 md:py-2.5 rounded-xl text-xs md:text-sm font-bold shadow-lg whitespace-nowrap",
-    mobile: "bg-primary text-white px-6 py-4 rounded-xl text-base font-black shadow-lg w-full text-center"
+    main: "bg-primary hover:bg-primary-vibrant text-white px-8 md:px-12 py-4 md:py-5 rounded-2xl text-lg md:text-xl font-black shadow-btn w-full md:w-fit text-center cursor-pointer",
+    header: "bg-primary hover:bg-primary-vibrant text-white px-4 py-2 md:px-6 md:py-2.5 rounded-xl text-xs md:text-sm font-bold shadow-lg whitespace-nowrap cursor-pointer",
+    mobile: "bg-primary text-white px-6 py-4 rounded-xl text-base font-black shadow-lg w-full text-center cursor-pointer"
   };
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (onClick) {
+      e.preventDefault();
+      onClick(e);
+      return;
+    }
     handleTrack();
-    // Fallback: force navigation after a short delay to allow tracking scripts to fire.
-    // This is needed because UTMFY's pixel.js intercepts clicks with preventDefault()
-    // and dispatches synthetic events that browsers ignore for <a> navigation.
     setTimeout(() => {
       window.location.href = finalUrl;
     }, 300);
@@ -75,7 +87,7 @@ const CTAButton = ({ children, className = "", variant = "main" }: { children: R
 
   return (
     <a
-      href={finalUrl}
+      href={onClick ? "#" : finalUrl}
       onClick={handleClick}
       className={`font-inter font-black flex items-center justify-center gap-2 transition-all active:scale-95 ${styles[variant]} ${className}`}
     >
@@ -88,7 +100,25 @@ const CTAButton = ({ children, className = "", variant = "main" }: { children: R
 export default function App() {
   const [selectedImg, setSelectedImg] = useState<string | null>(null);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [isUpsellOpen, setIsUpsellOpen] = useState(false);
   const carouselRef = useRef<HTMLDivElement>(null);
+  const { finalUrl, handleTrack } = useCheckoutUrl();
+
+  const openUpsellModal = () => setIsUpsellOpen(true);
+  const closeUpsellModal = () => setIsUpsellOpen(false);
+
+  const handleAccept29 = () => {
+    setIsUpsellOpen(false);
+    alert("Você selecionou o Pacote Completo (R$ 29,99)! O link de checkout será configurado em breve.");
+  };
+
+  const handleDecline19 = () => {
+    setIsUpsellOpen(false);
+    handleTrack();
+    setTimeout(() => {
+      window.location.href = finalUrl;
+    }, 300);
+  };
 
   const scrollCarousel = (direction: 'left' | 'right') => {
     if (carouselRef.current) {
@@ -150,7 +180,7 @@ export default function App() {
             </div>
             <span className="font-inter font-black text-lg md:text-2xl tracking-tighter uppercase">Kit OAB</span>
           </div>
-          <CTAButton variant="header"><span className="hidden sm:inline">R$ 19 · </span>COMPRAR<span className="hidden sm:inline"> AGORA</span> →</CTAButton>
+          <CTAButton variant="header" onClick={openUpsellModal}><span className="hidden sm:inline">R$ 19 · </span>COMPRAR<span className="hidden sm:inline"> AGORA</span> →</CTAButton>
         </div>
       </header>
 
@@ -166,7 +196,7 @@ export default function App() {
               Um caderno completo para a 1ª fase. Você resolve, confere o gabarito e transforma estudo em prática. Acesso imediato.
             </p>
             <div className="space-y-6 flex flex-col items-center lg:items-start">
-              <CTAButton className="w-full md:w-auto px-12">QUERO TREINAR COM 500 QUESTÕES →</CTAButton>
+              <CTAButton className="w-full md:w-auto px-12" onClick={openUpsellModal}>QUERO TREINAR COM 500 QUESTÕES →</CTAButton>
               <div className="flex flex-wrap justify-center lg:justify-start gap-6 font-mono text-[11px] text-text-sec uppercase tracking-wider">
                 <span className="flex items-center gap-2"><ShieldCheck className="w-4 h-4 text-primary" /> 7 dias de garantia</span>
                 <span className="flex items-center gap-2"><Zap className="w-4 h-4 text-primary" /> Acesso imediato</span>
@@ -398,70 +428,147 @@ export default function App() {
       </section>
 
       {/* 14. OFERTA (MOD.05) */}
-      <section className="py-20 md:py-32 px-6">
-        <div className="max-w-[840px] mx-auto">
+      <section className="py-20 md:py-32 px-6" id="planos">
+        <div className="max-w-[1180px] mx-auto">
           <div className="text-center mb-16">
             <SectionTag text="MOD.05 · OFERTA" />
-            <h2 className="text-5xl md:text-7xl font-inter font-black tracking-tighter mb-6">Tudo isso por menos de uma pizza.</h2>
-            <p className="text-text-sec text-xl">Pagamento único. Sem mensalidade.</p>
+            <h2 className="text-4xl md:text-6xl font-inter font-black tracking-tighter mb-6">Escolha o plano ideal para a sua aprovação.</h2>
+            <p className="text-text-sec text-xl max-w-2xl mx-auto">Pagamento único. Sem mensalidade. Acesso vitalício.</p>
           </div>
 
-          <div className="bg-bg shadow-neumorphic border-[8px] md:border-[16px] border-white/80 rounded-[32px] md:rounded-[48px] p-6 md:p-16 relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-32 h-32 md:w-48 md:h-48 bg-primary/5 rounded-full -mr-16 -mt-16 md:-mr-24 md:-mt-24"></div>
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-stretch max-w-[1080px] mx-auto">
+            {/* PLANO BÁSICO - R$ 19 */}
+            <div className="bg-bg shadow-neumorphic border border-white/80 rounded-[36px] p-8 md:p-10 flex flex-col justify-between relative overflow-hidden transition-all duration-300 hover:-translate-y-2">
+              <div>
+                <div className="flex justify-between items-center mb-6">
+                  <span className="bg-text/5 text-text font-mono text-[10px] uppercase tracking-[0.2em] font-bold px-3 py-1.5 rounded-full border border-black/5">
+                    PACOTE BÁSICO
+                  </span>
+                </div>
 
-            {/* Decorative bars top-right */}
-            <div className="absolute top-6 right-6 flex gap-1.5 opacity-20">
-              <div className="w-1 h-8 bg-text rounded-full"></div>
-              <div className="w-1 h-8 bg-text rounded-full"></div>
-              <div className="w-1 h-8 bg-text rounded-full"></div>
+                <h3 className="text-3xl font-inter font-black mb-2">Apostila 500 Questões</h3>
+                <p className="text-text-sec text-sm leading-relaxed mb-6">Ideal para quem precisa apenas do caderno de exercícios focado.</p>
+
+                <div className="bg-white/40 p-6 rounded-2xl border border-white/60 mb-8">
+                  <div className="text-xs font-mono text-text-sec uppercase tracking-widest mb-1 font-bold">Investimento único</div>
+                  <div className="flex items-baseline gap-2">
+                    <span className="text-5xl font-inter font-black text-text tracking-tight">R$ 19</span>
+                    <span className="text-xs font-mono text-text-sec uppercase tracking-wider font-bold">à vista</span>
+                  </div>
+                </div>
+
+                {/* Conteúdo Incluso */}
+                <div className="space-y-4 mb-8">
+                  <div className="font-mono text-[11px] uppercase tracking-widest text-text-sec font-bold mb-2">O QUE ESTÁ INCLUSO:</div>
+                  <div className="flex items-start gap-3 text-sm font-semibold">
+                    <Check className="w-5 h-5 text-green-500 shrink-0 mt-0.5" />
+                    <span>Apostila digital com 500 questões objetivas</span>
+                  </div>
+                  <div className="flex items-start gap-3 text-sm text-text-sec/50 line-through">
+                    <X className="w-5 h-5 text-text-sec/40 shrink-0 mt-0.5" />
+                    <span>+ 250 questões de simulado</span>
+                  </div>
+                  <div className="flex items-start gap-3 text-sm text-text-sec/50 line-through">
+                    <X className="w-5 h-5 text-text-sec/40 shrink-0 mt-0.5" />
+                    <span>Cronograma completo de estudos</span>
+                  </div>
+                  <div className="flex items-start gap-3 text-sm text-text-sec/50 line-through">
+                    <X className="w-5 h-5 text-text-sec/40 shrink-0 mt-0.5" />
+                    <span>Guia de estudos prático</span>
+                  </div>
+                </div>
+
+                {/* Vantagens dos 2 planos */}
+                <div className="pt-6 border-t border-black/5 space-y-3 mb-8">
+                  <div className="flex items-center gap-2.5 text-xs font-bold text-text-sec uppercase tracking-wider">
+                    <ShieldCheck className="w-4 h-4 text-primary shrink-0" />
+                    <span>Garantia de 7 dias</span>
+                  </div>
+                  <div className="flex items-center gap-2.5 text-xs font-bold text-text-sec uppercase tracking-wider">
+                    <Zap className="w-4 h-4 text-primary shrink-0" />
+                    <span>Acesso imediato</span>
+                  </div>
+                  <div className="flex items-center gap-2.5 text-xs font-bold text-text-sec uppercase tracking-wider">
+                    <FileText className="w-4 h-4 text-primary shrink-0" />
+                    <span>Atualização de conteúdo</span>
+                  </div>
+                </div>
+              </div>
+
+              <CTAButton className="w-full py-5 text-lg rounded-2xl" onClick={openUpsellModal}>
+                QUERO O PLANO BÁSICO POR R$ 19 →
+              </CTAButton>
             </div>
 
-            <div className="flex flex-col">
-              <SectionTag text="KIT COMPLETO" />
-              <h3 className="text-3xl md:text-4xl font-inter font-black mb-10 md:mb-12">500 Questões OAB + 2 bônus</h3>
+            {/* PLANO COMPLETO - R$ 29,99 */}
+            <div className="bg-bg shadow-neumorphic border-4 border-primary rounded-[36px] p-8 md:p-10 flex flex-col justify-between relative overflow-hidden transition-all duration-300 hover:-translate-y-2">
+              <div className="absolute top-0 right-0 bg-primary text-white font-mono text-[9px] uppercase tracking-[0.2em] font-black px-5 py-2 rounded-bl-2xl shadow-lg">
+                ★ RECOMENDADO • MAIS COMPLETO
+              </div>
 
-              {/* Item list with strikethrough prices */}
-              <div className="space-y-0 mb-8 w-full">
-                {[
-                  { name: "500 questões objetivas organizadas por disciplina", price: "R$ 97" },
-                  { name: "Bônus — Simulado completo", price: "R$ 67" },
-                  { name: "Bônus — Cronograma de estudos", price: "R$ 47" },
-                ].map((item, i) => (
-                  <div key={i} className="flex items-center justify-between py-5 border-b border-black/5">
-                    <span className="text-sm md:text-base font-medium text-text">{item.name}</span>
-                    <span className="font-mono text-sm text-text-sec line-through ml-4 shrink-0">{item.price}</span>
+              <div>
+                <div className="flex justify-between items-center mb-6 mt-2">
+                  <span className="bg-primary/10 text-primary font-mono text-[10px] uppercase tracking-[0.2em] font-bold px-3 py-1.5 rounded-full border border-primary/20">
+                    PACOTE COMPLETO
+                  </span>
+                </div>
+
+                <h3 className="text-3xl font-inter font-black mb-2">Kit Preparatório Completo</h3>
+                <p className="text-text-sec text-sm leading-relaxed mb-6">Estrutura completa com material de treino, simulados, plano e guia.</p>
+
+                <div className="bg-primary-deep text-white p-6 rounded-2xl mb-8 relative overflow-hidden">
+                  <div className="absolute top-0 right-0 w-24 h-24 bg-white/5 rounded-full -mr-8 -mt-8 pointer-events-none"></div>
+                  <div className="text-xs font-mono text-white/70 uppercase tracking-widest mb-1 font-bold">Investimento único</div>
+                  <div className="flex items-baseline gap-2">
+                    <span className="text-5xl font-inter font-black text-white tracking-tight">R$ 29,99</span>
+                    <span className="text-xs font-mono text-white/70 uppercase tracking-wider font-bold">à vista</span>
                   </div>
-                ))}
+                </div>
+
+                {/* Conteúdo Incluso */}
+                <div className="space-y-4 mb-8">
+                  <div className="font-mono text-[11px] uppercase tracking-widest text-primary font-bold mb-2">TUDO O QUE VOCÊ RECEBE:</div>
+                  <div className="flex items-start gap-3 text-sm font-semibold">
+                    <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                    <span>Apostila digital com 500 questões objetivas</span>
+                  </div>
+                  <div className="flex items-start gap-3 text-sm font-bold text-text">
+                    <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                    <span className="bg-primary/10 px-2 py-0.5 rounded text-primary font-black">+ 250 questões de simulado</span>
+                  </div>
+                  <div className="flex items-start gap-3 text-sm font-bold text-text">
+                    <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                    <span>Cronograma completo de estudos</span>
+                  </div>
+                  <div className="flex items-start gap-3 text-sm font-bold text-text">
+                    <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                    <span>Guia de estudos prático</span>
+                  </div>
+                </div>
+
+                {/* Vantagens dos 2 planos */}
+                <div className="pt-6 border-t border-black/5 space-y-3 mb-8">
+                  <div className="flex items-center gap-2.5 text-xs font-bold text-text-sec uppercase tracking-wider">
+                    <ShieldCheck className="w-4 h-4 text-primary shrink-0" />
+                    <span>Garantia de 7 dias</span>
+                  </div>
+                  <div className="flex items-center gap-2.5 text-xs font-bold text-text-sec uppercase tracking-wider">
+                    <Zap className="w-4 h-4 text-primary shrink-0" />
+                    <span>Acesso imediato</span>
+                  </div>
+                  <div className="flex items-center gap-2.5 text-xs font-bold text-text-sec uppercase tracking-wider">
+                    <FileText className="w-4 h-4 text-primary shrink-0" />
+                    <span>Atualização de conteúdo</span>
+                  </div>
+                </div>
               </div>
 
-              {/* Total strikethrough */}
-              <div className="flex items-center justify-between mb-10">
-                <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-text-sec font-bold">Total no avulso</span>
-                <span className="font-mono text-xl md:text-2xl text-text-sec line-through font-bold">R$ 211</span>
-              </div>
-
-              {/* Price highlight box */}
-              <div className="bg-primary-deep rounded-2xl p-6 md:p-8 mb-8">
-                <div className="flex items-center gap-2 mb-3">
-                  <div className="w-2.5 h-2.5 bg-green-400 rounded-full animate-pulse"></div>
-                  <span className="font-mono text-[10px] text-white/70 uppercase tracking-[0.2em] font-bold">Hoje, tudo junto por</span>
-                </div>
-                <div className="flex items-baseline gap-3 mb-4">
-                  <span className="text-6xl md:text-8xl font-inter font-black text-white tracking-tighter leading-none">R$19</span>
-                  <span className="font-mono text-sm text-white/60 uppercase tracking-wider">à vista</span>
-                </div>
-                <div className="flex flex-wrap gap-6 font-mono text-[10px] text-white/60 uppercase tracking-widest">
-                  <span className="flex items-center gap-2"><Zap className="w-3.5 h-3.5" /> Acesso imediato</span>
-                  <span className="flex items-center gap-2"><ShieldCheck className="w-3.5 h-3.5" /> 7 dias de garantia</span>
-                </div>
-              </div>
-
-              {/* CTA */}
-              <CTAButton className="w-full py-6 text-xl rounded-2xl">QUERO O KIT COMPLETO POR R$ 19 →</CTAButton>
-
-              <p className="text-center text-text-sec/60 font-mono text-[10px] uppercase tracking-widest mt-6">
-                Pagamento processado com segurança. Após confirmação, o acesso é liberado por e-mail.
-              </p>
+              <button
+                onClick={handleAccept29}
+                className="bg-primary hover:bg-primary-vibrant text-white w-full py-5 text-lg rounded-2xl font-inter font-black shadow-btn transition-all active:scale-95 text-center cursor-pointer"
+              >
+                QUERO O PACOTE COMPLETO POR R$ 29,99 →
+              </button>
             </div>
           </div>
         </div>
@@ -546,7 +653,7 @@ export default function App() {
               <div className="font-mono text-2xl font-bold text-primary mb-2">R$ 19 · PAGAMENTO ÚNICO</div>
               <p className="text-text-sec font-mono text-[10px] uppercase tracking-widest">Acesso imediato • Material Digital • 7 Dias Garantia</p>
             </div>
-            <CTAButton className="w-full lg:w-auto px-16 py-6 text-xl">QUERO COMEÇAR AGORA →</CTAButton>
+            <CTAButton className="w-full lg:w-auto px-16 py-6 text-xl" onClick={openUpsellModal}>QUERO COMEÇAR AGORA →</CTAButton>
           </div>
         </div>
       </section>
@@ -569,7 +676,80 @@ export default function App() {
         </div>
       </footer>
 
+      {/* POPUP MODAL DE UPSELL (OFERTA R$ 29,99) */}
+      {isUpsellOpen && (
+        <div className="fixed inset-0 z-[400] bg-primary-deep/80 backdrop-blur-md flex items-center justify-center p-4 sm:p-6">
+          <div
+            className="bg-bg shadow-2xl rounded-[32px] border-4 border-white/90 p-6 md:p-10 max-w-[540px] w-full relative overflow-hidden text-center"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Fechar modal */}
+            <button
+              onClick={closeUpsellModal}
+              className="absolute top-5 right-5 text-text-sec/60 hover:text-text p-2 rounded-full hover:bg-black/5 transition-colors cursor-pointer"
+            >
+              <X className="w-6 h-6" />
+            </button>
 
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 bg-primary/10 text-primary font-mono text-[10px] uppercase tracking-[0.2em] font-black px-4 py-1.5 rounded-full border border-primary/20 mb-6">
+              <span>🚀 OFERTA ESPECIAL DE UPGRADE</span>
+            </div>
+
+            <h3 className="text-2xl sm:text-3xl font-inter font-black tracking-tight mb-3">
+              Leve o Pacote Completo por apenas <span className="text-primary">R$ 29,99</span>!
+            </h3>
+
+            <p className="text-text-sec text-sm sm:text-base leading-relaxed mb-6">
+              Por apenas <strong className="text-text font-bold">+ R$ 10,99</strong> (menos que um café!), você destrava a preparação completa:
+            </p>
+
+            {/* Lista de Recursos extras */}
+            <div className="bg-white/50 p-5 rounded-2xl border border-white/80 space-y-3 mb-6 text-left">
+              <div className="flex items-center gap-3 text-sm font-semibold text-text">
+                <Check className="w-5 h-5 text-primary shrink-0" />
+                <span>Apostila digital com 500 questões objetivas</span>
+              </div>
+              <div className="flex items-center gap-3 text-sm font-bold text-primary">
+                <Check className="w-5 h-5 text-primary shrink-0" />
+                <span>+ 250 questões de simulado</span>
+              </div>
+              <div className="flex items-center gap-3 text-sm font-bold text-primary">
+                <Check className="w-5 h-5 text-primary shrink-0" />
+                <span>Cronograma completo de estudos</span>
+              </div>
+              <div className="flex items-center gap-3 text-sm font-bold text-primary">
+                <Check className="w-5 h-5 text-primary shrink-0" />
+                <span>Guia de estudos prático</span>
+              </div>
+            </div>
+
+            {/* Badges de garantia */}
+            <div className="flex flex-wrap justify-center gap-4 text-[10px] font-mono text-text-sec uppercase tracking-wider mb-8">
+              <span className="flex items-center gap-1.5 font-bold"><ShieldCheck className="w-3.5 h-3.5 text-primary" /> Garantia de 7 dias</span>
+              <span className="flex items-center gap-1.5 font-bold"><Zap className="w-3.5 h-3.5 text-primary" /> Acesso imediato</span>
+              <span className="flex items-center gap-1.5 font-bold"><FileText className="w-3.5 h-3.5 text-primary" /> Atualização</span>
+            </div>
+
+            {/* Ações do Modal */}
+            <div className="space-y-3">
+              <button
+                onClick={handleAccept29}
+                className="bg-primary hover:bg-primary-vibrant text-white w-full py-4 sm:py-5 rounded-2xl text-base sm:text-lg font-inter font-black shadow-btn transition-all active:scale-95 text-center cursor-pointer flex items-center justify-center gap-2"
+              >
+                SIM! QUERO O PACOTE COMPLETO POR R$ 29,99 →
+              </button>
+
+              <button
+                onClick={handleDecline19}
+                className="text-text-sec hover:text-text text-xs sm:text-sm font-bold underline decoration-text-sec/30 underline-offset-4 w-full py-2 transition-colors cursor-pointer"
+              >
+                Não, obrigado. Quero apenas o Plano Básico de R$ 19
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* MODAL DE IMAGEM */}
       {selectedImg && (
