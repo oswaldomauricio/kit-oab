@@ -6,9 +6,9 @@ import {
 } from "lucide-react";
 
 // 1. CONFIGURAÇÃO DE CHECKOUT E UTMs
-const CHECKOUT_URL_BASE = "https://pay.hotmart.com/X107415504B?bid=1788286126811";
-const CHECKOUT_URL_19_BASE = "https://pay.hotmart.com/X107415504B?bid=1788286126811";
-const CHECKOUT_URL_29_BASE = "https://pay.hotmart.com/E107441550M?bid=1788380339647";
+const CHECKOUT_URL_BASE = "https://go.fruitfypay.com/xA9fvNVcLv9GySYh";
+const CHECKOUT_URL_19_BASE = "https://go.fruitfypay.com/xA9fvNVcLv9GySYh";
+const CHECKOUT_URL_29_BASE = "https://go.fruitfypay.com/9mK69uVaeZqJkC6g";
 
 const useCheckoutUrl = (baseUrl: string = CHECKOUT_URL_19_BASE) => {
   const [finalUrl, setFinalUrl] = useState(baseUrl);
@@ -19,10 +19,9 @@ const useCheckoutUrl = (baseUrl: string = CHECKOUT_URL_19_BASE) => {
         const urlObj = new URL(baseUrl);
         const params = new URLSearchParams(window.location.search);
 
-        // Preservar UTMs e parâmetros de rastreio
-        const trackParams = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'fbclid', 'src'];
-        trackParams.forEach(param => {
-          if (params.has(param)) urlObj.searchParams.set(param, params.get(param)!);
+        // Preservar todas as UTMs e parâmetros de rastreio (Meta, UTMFY, Google, etc.)
+        params.forEach((value, key) => {
+          urlObj.searchParams.set(key, value);
         });
 
         setFinalUrl(urlObj.toString());
@@ -32,9 +31,16 @@ const useCheckoutUrl = (baseUrl: string = CHECKOUT_URL_19_BASE) => {
     }
   }, [baseUrl]);
 
-  const handleTrack = () => {
+  const handleTrack = (value?: number) => {
     if (typeof window !== "undefined" && (window as any).fbq) {
-      (window as any).fbq('track', 'InitiateCheckout');
+      (window as any).fbq('track', 'InitiateCheckout', value ? {
+        content_name: 'Kit 500 Questões OAB',
+        value: value,
+        currency: 'BRL'
+      } : {
+        content_name: 'Kit 500 Questões OAB',
+        currency: 'BRL'
+      });
     }
   };
 
@@ -112,7 +118,7 @@ export default function App() {
 
   const handleAccept29 = () => {
     setIsUpsellOpen(false);
-    handleTrack29();
+    handleTrack29(29.99);
     setTimeout(() => {
       window.location.href = finalUrl29;
     }, 300);
@@ -120,7 +126,7 @@ export default function App() {
 
   const handleDecline19 = () => {
     setIsUpsellOpen(false);
-    handleTrack19();
+    handleTrack19(19.00);
     setTimeout(() => {
       window.location.href = finalUrl19;
     }, 300);
